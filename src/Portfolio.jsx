@@ -11,16 +11,16 @@ import {
    whole site updates. No other code changes needed.
    ───────────────────────────────────────────────────────────────────────── */
 const CONFIG = {
-  brand: "OPARA",
-  fullName: "Precious Opara",
+  brand: "KRUDDPIPPIN",
+  fullName: "Opara, Precious Chibuzor",
   role: "I build landing pages that load fast and convert — shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",
-  email: "you@youremail.com",          // ← put your real email
+  email: "precious.op2013@gmail.com",          // ← put your real email
   calendly: "#",                        // ← paste your Calendly link, or leave "#"
   socials: {
-    github: "https://github.com/yourhandle",
+    github: "https://github.com/kruddpippin",
     linkedin: "https://linkedin.com/in/yourhandle",
-    x: "https://x.com/yourhandle",
+    x: "https://x.com/kruddpippin",
   },
   stats: [
     { value: 30, suffix: "+", label: "Pages shipped" },
@@ -107,19 +107,19 @@ const CONFIG = {
     {
       quote:
         "Sent the brief on Monday, had a live page Thursday. It loaded faster than anything we'd had before and bookings went up the same week.",
-      name: "Amara N.",
+      name: "Amara Ahuchogu.",
       role: "Wellness coach",
     },
     {
       quote:
         "Most developers go quiet for a week. This was the opposite — clear updates the whole way, and the page just worked.",
-      name: "David O.",
+      name: "David Oyeniyi.",
       role: "Founder, DTC brand",
     },
     {
       quote:
         "Fixed price, fixed deadline, no surprises. I knew exactly what I was getting and got more.",
-      name: "Lena M.",
+      name: "Sarah Yohanna.",
       role: "Marketing lead",
     },
   ],
