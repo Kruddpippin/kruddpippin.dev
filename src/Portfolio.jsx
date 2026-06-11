@@ -19,7 +19,7 @@ const CONFIG = {
   calendly: "#",                        // ← paste your Calendly link, or leave "#"
   socials: {
     github: "https://github.com/kruddpippin",
-    linkedin: "https://linkedin.com/in/yourhandle",
+    linkedin: "https://linkedin.com/in/precious-opara-511827231",
     x: "https://x.com/kruddpippin",
   },
   stats: [
