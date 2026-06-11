@@ -689,6 +689,7 @@ const CSS = `
   --coral:#FF6B57; --violet:#9D7BFF; --mint:#57E6C4;
   --grad:linear-gradient(110deg,#FF6B57,#9D7BFF 55%,#57E6C4);
   --glow:rgba(157,123,255,.35);
+  --sunny-color:rgba(253,224,71,0.06);
 }
 .root[data-theme="light"]{
   --bg:#F6F4FF; --bg2:#FFFFFF; --surface:#FFFFFF; --surface2:#F0ECFF;
@@ -697,10 +698,14 @@ const CSS = `
   --coral:#EE4F38; --violet:#7C53F5; --mint:#10A988;
   --grad:linear-gradient(110deg,#EE4F38,#7C53F5 55%,#10A988);
   --glow:rgba(124,83,245,.20);
+  --sunny-color:rgba(253,224,71,0.30);
 }
 
 .root{
-  background:var(--bg); color:var(--text); min-height:100vh;
+  background-color:var(--bg);
+  background-image:radial-gradient(circle at center, var(--sunny-color), transparent 70%);
+  background-attachment:fixed;
+  color:var(--text); min-height:100vh;
   font-family:'Inter',system-ui,sans-serif; line-height:1.6;
   overflow-x:hidden; transition:background .4s ease,color .4s ease;
   -webkit-font-smoothing:antialiased;
