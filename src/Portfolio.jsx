@@ -101,7 +101,7 @@ const CONFIG = {
     },
     {
       title: "Northwind Studio",
-      type: "Fullwebsite for a creative studio",
+      type: "Full website for a creative studio",
       stack: ["Brand", "Motion"],
       grad: "linear-gradient(135deg,#0f2a3a,#2dd4bf 60%,#a5f3fc)",
       screenshot: "/photo-studio.jpg.png",
