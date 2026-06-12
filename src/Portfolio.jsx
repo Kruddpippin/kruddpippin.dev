@@ -672,7 +672,7 @@ export default function Portfolio() {
       {/* ── FOOTER ──────────────────────────────────────────── */}
       <footer className="footer wrap">
         <span>
-          © {new Date().getFullYear()} {CONFIG.fullName}. Built fast, on purpose.
+          © {new Date().getFullYear()} {CONFIG.brand}. Built fast, on purpose.
         </span>
         <button className="back-top-link" onClick={() => go("home")}>
           Back to top <ArrowUp size={14} />
@@ -778,7 +778,7 @@ const CSS = `
 .brand{display:flex; align-items:center; gap:9px; font-family:'Bricolage Grotesque';
   font-weight:800; font-size:20px; letter-spacing:.04em;}
 .brand-dot{width:11px; height:11px; border-radius:50%; background:var(--grad);
-  box-shadow:0 0 16px var(--glow);}
+  box-shadow:0 0 16px var(--glow); animation:pulse-dot 2.5s ease-in-out infinite;}
 .nav-links{display:flex; gap:4px;}
 .nav-link{padding:8px 14px; border-radius:999px; font-size:14px; font-weight:500;
   color:var(--muted); transition:.2s;}
@@ -794,7 +794,12 @@ const CSS = `
   border-radius:999px; font-weight:600; font-size:14px; transition:.22s; white-space:nowrap;}
 .btn.big{padding:15px 26px; font-size:15px;}
 .btn.full{width:100%; justify-content:center;}
-.btn-primary{background:var(--grad); color:#fff; box-shadow:0 8px 24px -8px var(--glow);}
+.btn-primary{background:var(--grad); color:#fff; box-shadow:0 8px 24px -8px var(--glow);
+  position:relative; overflow:hidden;}
+.btn-primary::before{content:""; position:absolute; top:0; left:-100%; width:60%; height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:skewX(-20deg);}
+.btn-primary:hover::before{animation:shimmer-btn .55s ease forwards;}
 .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 34px -8px var(--glow);}
 .btn-ghost{border:1px solid var(--border2); color:var(--text);}
 .btn-ghost:hover{background:var(--surface2); transform:translateY(-2px);}
@@ -832,8 +837,9 @@ const CSS = `
 .eyebrow svg{color:var(--mint);}
 .hero-title{font-family:'Bricolage Grotesque'; font-weight:800; line-height:1.02;
   font-size:clamp(42px,8vw,82px); letter-spacing:-.02em; margin:0 0 22px;}
-.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text;
-  -webkit-text-fill-color:transparent;}
+.grad-text{background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
+  background-clip:text; -webkit-text-fill-color:transparent;
+  animation:grad-flow 5s linear infinite;}
 .hero-sub{font-size:clamp(16px,2.4vw,20px); color:var(--muted); max-width:560px;
   margin:0 auto 30px;}
 .hero-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px;}
@@ -841,13 +847,15 @@ const CSS = `
 /* countdown signature */
 .countdown{display:inline-flex; flex-direction:column; align-items:center; gap:8px;
   padding:18px 30px; border:1px solid var(--border); border-radius:18px;
-  background:var(--surface); box-shadow:0 20px 50px -24px var(--glow);}
+  background:var(--surface); box-shadow:0 20px 50px -24px var(--glow);
+  animation:float 4s ease-in-out infinite;}
 .cd-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em;
   text-transform:uppercase; color:var(--muted);}
 .cd-clock{display:flex; align-items:center; gap:4px; font-family:'JetBrains Mono',monospace;
   font-weight:700; font-size:clamp(30px,6vw,46px);}
-.cd-clock b{background:var(--grad); -webkit-background-clip:text; background-clip:text;
-  -webkit-text-fill-color:transparent; min-width:1.4ch; text-align:center;}
+.cd-clock b{background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
+  background-clip:text; -webkit-text-fill-color:transparent; min-width:1.4ch; text-align:center;
+  animation:grad-flow 5s linear infinite;}
 .cd-clock i{color:var(--muted); font-style:normal; animation:blink 1s steps(1) infinite;}
 @keyframes blink{50%{opacity:.25;}}
 
@@ -865,7 +873,9 @@ const CSS = `
 .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding-top:70px; padding-bottom:10px;}
 .stat{padding:24px; border:1px solid var(--border); border-radius:16px; background:var(--surface); text-align:center;}
 .stat-num{font-family:'Bricolage Grotesque'; font-weight:800; font-size:clamp(30px,5vw,44px);
-  background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+  background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
+  background-clip:text; -webkit-text-fill-color:transparent;
+  animation:grad-flow 5s linear infinite;}
 .stat-label{font-size:13px; color:var(--muted); margin-top:4px;}
 
 /* section head */
@@ -879,7 +889,7 @@ const CSS = `
 .work-thumb{display:block; height:230px; border-radius:18px; position:relative; overflow:hidden;
   border:1px solid var(--border); transition:.35s;}
 .work-thumb::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,.12);}
-.work-card:hover .work-thumb{transform:translateY(-6px); box-shadow:0 26px 50px -22px rgba(0,0,0,.5);}
+.work-card:hover .work-thumb{transform:translateY(-6px) scale(1.02); box-shadow:0 26px 50px -22px rgba(0,0,0,.5);}
 .browser-dots{position:absolute; top:14px; left:16px; display:flex; gap:6px; z-index:2;}
 .browser-dots i{width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.7);}
 .work-visit{position:absolute; bottom:16px; right:18px; z-index:2; display:flex; align-items:center;
@@ -1026,9 +1036,28 @@ const CSS = `
   .hero{padding-top:56px;}
 }
 
+/* ── New animations ──────────────────────────────────────── */
+@keyframes grad-flow{
+  0%  {background-position:0% center;}
+  100%{background-position:200% center;}
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%    {transform:translateY(-8px);}
+}
+@keyframes pulse-dot{
+  0%,100%{box-shadow:0 0 16px var(--glow); transform:scale(1);}
+  50%    {box-shadow:0 0 28px var(--glow),0 0 48px var(--glow); transform:scale(1.18);}
+}
+@keyframes shimmer-btn{
+  from{left:-100%;}
+  to  {left:200%;}
+}
+
 /* respect reduced motion */
 @media(prefers-reduced-motion:reduce){
-  .aurora,.marquee-track,.cd-clock i{animation:none !important;}
+  .aurora,.marquee-track,.cd-clock i,
+  .grad-text,.stat-num,.cd-clock b,.countdown,.brand-dot,.btn-primary::before{animation:none !important;}
   .reveal{transition:none; opacity:1; transform:none;}
   *{transition-duration:.01ms !important;}
 }
