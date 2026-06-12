@@ -222,6 +222,9 @@ export default function Portfolio() {
   const [openFaq, setOpenFaq] = useState(0);
   const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   /* scroll progress + back-to-top visibility */
   useEffect(() => {
@@ -269,12 +272,27 @@ export default function Portfolio() {
     }
   };
 
-  const sendMessage = () => {
-    const subject = encodeURIComponent(`New project enquiry from ${form.name || "your site"}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+  const sendMessage = async () => {
+    if (!form.name || !form.email || !form.message) {
+      setSendError("Please fill in all fields.");
+      return;
+    }
+    setSending(true);
+    setSendError("");
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      setSendError("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const nav = [
@@ -637,9 +655,16 @@ export default function Portfolio() {
                 placeholder="A landing page for my coaching launch next month…"
               />
             </label>
-            <button className="btn btn-primary full" onClick={sendMessage}>
-              Send message <ArrowUpRight size={16} />
-            </button>
+            {sendError && <p style={{ color: "var(--coral)", fontSize: 13, margin: 0 }}>{sendError}</p>}
+            {sent
+              ? <p style={{ color: "var(--mint)", fontSize: 14, fontWeight: 600, margin: 0 }}>
+                  <Check size={15} style={{ display: "inline", marginRight: 6 }} />
+                  Message sent — I'll be in touch soon.
+                </p>
+              : <button className="btn btn-primary full" onClick={sendMessage} disabled={sending}>
+                  {sending ? "Sending…" : <> Send message <ArrowUpRight size={16} /> </>}
+                </button>
+            }
           </Reveal>
         </div>
       </section>
