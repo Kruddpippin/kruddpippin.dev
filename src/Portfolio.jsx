@@ -209,14 +209,13 @@ function CountUp({ value, suffix = "", decimals = 0 }) {
   );
 }
 
+function getScheduledTheme() {
+  const h = new Date().getHours();
+  return h >= 8 && h < 19 ? "light" : "dark";
+}
+
 export default function Portfolio() {
-  const initialTheme =
-    typeof window !== "undefined" &&
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-      ? "light"
-      : "dark";
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, setTheme] = useState(getScheduledTheme);
   const [menuOpen, setMenuOpen] = useState(false);
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("home");
@@ -227,6 +226,22 @@ export default function Portfolio() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [sendError, setSendError] = useState("");
+
+  /* auto theme: light 8 AM → dark 7 PM */
+  useEffect(() => {
+    const schedule = () => {
+      const now = new Date();
+      const h = now.getHours();
+      const next = new Date(now);
+      if (h < 8)        { next.setHours(8,  0, 0, 0); }
+      else if (h < 19)  { next.setHours(19, 0, 0, 0); }
+      else              { next.setDate(next.getDate() + 1); next.setHours(8, 0, 0, 0); }
+      const id = setTimeout(() => { setTheme(getScheduledTheme()); schedule(); }, next - now);
+      return id;
+    };
+    const id = schedule();
+    return () => clearTimeout(id);
+  }, []);
 
   /* scroll progress + back-to-top visibility */
   useEffect(() => {
