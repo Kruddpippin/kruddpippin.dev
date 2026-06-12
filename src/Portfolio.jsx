@@ -562,7 +562,7 @@ export default function Portfolio() {
         <Reveal className="about-text">
           <span className="kicker">About</span>
           <h2>
-            I'm {CONFIG.fullName}. I make small businesses look like they mean
+            I'm {CONFIG.fullName}. I make businesses look like they mean
             business.
           </h2>
           <p>
