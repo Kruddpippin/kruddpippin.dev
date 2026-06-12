@@ -88,6 +88,7 @@ const CONFIG = {
       type: "Fashion House landing page",
       stack: ["Landing", "Conversion"],
       grad: "linear-gradient(135deg,#3a1d5e,#8b5cf6 60%,#ffb4a2)",
+      screenshot: "/mayen-s-touch.jpg.png",
       live: "https://mayen-s-touch.vercel.app/",
     },
     {
