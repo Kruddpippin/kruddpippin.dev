@@ -409,7 +409,19 @@ export default function Portfolio() {
         <div className="work-grid">
           {CONFIG.projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 80} className="work-card">
-              <a href={p.live} className="work-thumb" style={{ background: p.grad }}>
+              <a
+                href={p.live}
+                className="work-thumb"
+                style={
+                  p.live !== "#"
+                    ? {
+                        backgroundImage: `url(https://image.thum.io/get/width/1200/crop/630/${p.live}), ${p.grad}`,
+                        backgroundSize: "cover, cover",
+                        backgroundPosition: "top center, center",
+                      }
+                    : { background: p.grad }
+                }
+              >
                 <span className="browser-dots"><i /><i /><i /></span>
                 <span className="work-visit">
                   Visit <ArrowUpRight size={16} />
