@@ -80,6 +80,7 @@ const CONFIG = {
       type: "Pixel-perfect rebuild",
       stack: ["React", "Vite", "Routing"],
       grad: "linear-gradient(135deg,#1b3a2e,#3f7d5b 55%,#a8e6b0)",
+      screenshot: "/didi-couture.jpg.png",
       live: "https://didi-couture.vercel.app/",
     },
     {
@@ -413,7 +414,13 @@ export default function Portfolio() {
                 href={p.live}
                 className="work-thumb"
                 style={
-                  p.live !== "#"
+                  p.screenshot
+                    ? {
+                        backgroundImage: `url(${p.screenshot}), ${p.grad}`,
+                        backgroundSize: "cover, cover",
+                        backgroundPosition: "top center, center",
+                      }
+                    : p.live !== "#"
                     ? {
                         backgroundImage: `url(https://image.thum.io/get/width/1200/crop/630/${p.live}), ${p.grad}`,
                         backgroundSize: "cover, cover",
