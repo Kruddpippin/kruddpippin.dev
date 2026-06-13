@@ -48,7 +48,7 @@ const CONFIG = {
     },
     {
       name: "Mobile App",
-      price: "$800",
+      price: "$650",
       tag: "New",
       featured: false,
       blurb: "A custom app that connects your business to customers and tracks everything.",
@@ -63,7 +63,7 @@ const CONFIG = {
     },
     {
       name: "Care Plan",
-      price: "$40",
+      price: "$50",
       priceSuffix: "/mo",
       tag: "Recurring",
       featured: false,

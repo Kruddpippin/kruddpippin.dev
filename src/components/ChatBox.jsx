@@ -30,11 +30,19 @@ export default function ChatBox() {
         body: JSON.stringify({ message: text, history }),
       });
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+      if (!data.reply) throw new Error("Empty response");
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
-    } catch {
+    } catch (err) {
+      const isApiMissing = err.message?.includes("404") || err instanceof SyntaxError;
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Something went wrong. Email precious.op2013@gmail.com directly and I'll get back to you." },
+        {
+          role: "assistant",
+          content: isApiMissing
+            ? "The chat API isn't reachable — run the site with `vercel dev` locally, or check that ANTHROPIC_API_KEY is set in Vercel."
+            : "Something went wrong. Email precious.op2013@gmail.com directly and I'll get back to you.",
+        },
       ]);
     } finally {
       setLoading(false);
