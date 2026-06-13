@@ -12,6 +12,7 @@ import About from "./sections/About.jsx";
 import Faq from "./sections/Faq.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
+import ChatBox from "./components/ChatBox.jsx";
 import "./styles/index.css";
 
 export default function Portfolio() {
@@ -103,6 +104,8 @@ export default function Portfolio() {
       >
         <ArrowUp size={18} />
       </button>
+
+      <ChatBox />
     </div>
   );
 }

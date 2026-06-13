@@ -47,6 +47,21 @@ const CONFIG = {
       ],
     },
     {
+      name: "Mobile App",
+      price: "$800",
+      tag: "New",
+      featured: false,
+      blurb: "A custom app that connects your business to customers and tracks everything.",
+      features: [
+        "Cross-platform: iOS & Android",
+        "Customer-facing: browse, order, book",
+        "Business dashboard & analytics",
+        "Inventory & sales tracking",
+        "Push notifications",
+        "3 rounds of revisions",
+      ],
+    },
+    {
       name: "Care Plan",
       price: "$40",
       priceSuffix: "/mo",
