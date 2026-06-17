@@ -124,12 +124,19 @@
 .cd-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em;
   text-transform:uppercase; color:var(--muted);}
 .cd-clock{display:flex; align-items:center; gap:4px; font-family:'JetBrains Mono',monospace;
-  font-weight:700; font-size:clamp(30px,6vw,46px);}
+  font-weight:700; font-size:clamp(30px,6vw,46px); position:relative; overflow:hidden;}
+.cd-clock::after{content:""; position:absolute; inset:0; background:linear-gradient(
+  105deg, transparent 35%, rgba(255,255,255,.18) 42%, rgba(255,255,255,.3) 50%,
+  rgba(255,255,255,.18) 58%, transparent 65%); background-size:250% 100%;
+  animation:shimmer 3s ease-in-out infinite; pointer-events:none;}
 .cd-clock b{background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
   background-clip:text; -webkit-text-fill-color:transparent; min-width:1.4ch; text-align:center;
   animation:grad-flow 5s linear infinite;}
 .cd-clock i{color:var(--muted); font-style:normal; animation:blink 1s steps(1) infinite;}
+.cd-bounce{animation:tick-bounce .4s cubic-bezier(.34,1.56,.64,1);}
 @keyframes blink{50%{opacity:.25;}}
+@keyframes shimmer{0%{background-position:200% center;} 100%{background-position:-200% center;}}
+@keyframes tick-bounce{0%{transform:scale(1);} 40%{transform:scale(1.06) translateY(-2px);} 100%{transform:scale(1);}}
 
 /* marquee */
 .marquee{margin-top:64px; overflow:hidden; border-top:1px solid var(--border);
@@ -411,7 +418,7 @@
 
 /* respect reduced motion */
 @media(prefers-reduced-motion:reduce){
-  .aurora,.marquee-track,.cd-clock i,
+  .aurora,.marquee-track,.cd-clock i,.cd-clock::after,.cd-bounce,
   .grad-text,.stat-num,.cd-clock b,.countdown,.brand-dot,.btn-primary::before{animation:none !important;}
   .reveal{transition:none; opacity:1; transform:none;}
   *{transition-duration:.01ms !important;}
