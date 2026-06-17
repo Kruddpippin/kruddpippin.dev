@@ -15,9 +15,9 @@ export default function About() {
           I'm {CONFIG.fullName}. I make businesses look like they mean business.
         </h2>
         <p>
-          I build fast, modern landing pages with React and Vite — the same
+          Let's build you a fast, modern landing page with React and Vite — the same
           tools the best product teams use. Most freelance work goes quiet for
-          a week and shows up late. I do the opposite: a fixed price, a fixed
+          a week and shows up late. We do the opposite: a fixed price, a fixed
           deadline, and clear updates the whole way through.
         </p>
         <p className="muted-line">{CONFIG.location}</p>

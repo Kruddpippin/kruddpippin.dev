@@ -271,6 +271,15 @@
   background:var(--bg); border:1px solid var(--border); border-radius:11px; padding:13px 15px; resize:vertical; transition:.2s;}
 .contact-form input:focus,.contact-form textarea:focus{outline:none; border-color:var(--violet);
   box-shadow:0 0 0 3px var(--glow);}
+.service-select{border:none; margin:0; padding:0;}
+.service-select legend{font-size:13px; font-weight:600; color:var(--muted); margin-bottom:7px;}
+.service-options{display:flex; flex-wrap:wrap; gap:8px;}
+.service-chip{display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:500;
+  padding:8px 14px; border-radius:99px; border:1px solid var(--border); color:var(--text);
+  background:var(--bg); cursor:pointer; transition:.2s; user-select:none;}
+.service-chip:hover{border-color:var(--violet);}
+.service-chip.selected{background:var(--grad); color:#fff; border-color:transparent;}
+.service-chip input[type="checkbox"]{display:none;}
 
 /* footer */
 .footer{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;

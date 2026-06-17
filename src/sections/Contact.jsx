@@ -5,7 +5,7 @@ import CONFIG from "../data/config.js";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", services: [], message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [sendError, setSendError] = useState("");
@@ -21,8 +21,8 @@ export default function Contact() {
   };
 
   const sendMessage = async () => {
-    if (!form.name || !form.email || !form.message) {
-      setSendError("Please fill in all fields.");
+    if (!form.name || !form.email || form.services.length === 0) {
+      setSendError("Please fill in all fields and select at least one service.");
       return;
     }
     setSending(true);
@@ -31,11 +31,14 @@ export default function Contact() {
       const res = await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+        ...form,
+        message: form.services.join(", ") + (form.message ? `\n\n${form.message}` : ""),
+      }),
       });
       if (!res.ok) throw new Error();
       setSent(true);
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", services: [], message: "" });
     } catch {
       setSendError("Something went wrong. Please try again.");
     } finally {
@@ -90,10 +93,39 @@ export default function Contact() {
               placeholder="jane@brand.com"
             />
           </label>
+          <fieldset className="service-select">
+            <legend>What do you need?</legend>
+            <div className="service-options">
+              {[
+                "Express Page",
+                "Full Site",
+                "Mobile App",
+                "Care Plan",
+                "E-commerce Integration",
+                "SEO & Performance Audit",
+                "UI/UX Design",
+                "Branding & Logo",
+              ].map((service) => (
+                <label key={service} className={`service-chip${form.services.includes(service) ? " selected" : ""}`}>
+                  <input
+                    type="checkbox"
+                    checked={form.services.includes(service)}
+                    onChange={(e) => {
+                      const updated = e.target.checked
+                        ? [...form.services, service]
+                        : form.services.filter((s) => s !== service);
+                      setForm({ ...form, services: updated });
+                    }}
+                  />
+                  {service}
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <label>
-            What do you need?
+            Anything else?
             <textarea
-              rows={4}
+              rows={3}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               placeholder="A landing page for my coaching launch next month…"
