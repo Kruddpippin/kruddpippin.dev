@@ -419,7 +419,7 @@
 
 /* hanging lamp – dark mode only */
 .lamp{
-  position:fixed; top:0; right:18%; z-index:55;
+  position:fixed; top:0; left:calc(50% - min(310px, 30vw)); z-index:55;
   display:flex; flex-direction:column; align-items:center;
   transform-origin:top center;
   animation:lamp-swing 4s ease-in-out infinite;
