@@ -78,6 +78,16 @@ export default function Portfolio() {
     <div data-theme={theme} className="root">
       <div className="progress" style={{ width: `${progress}%` }} />
 
+      {theme === "dark" && (
+        <div className="lamp" aria-hidden="true">
+          <div className="lamp-cord" />
+          <div className="lamp-shade">
+            <div className="lamp-bulb" />
+          </div>
+          <div className="lamp-cone" />
+        </div>
+      )}
+
       <Nav
         theme={theme}
         setTheme={setTheme}
