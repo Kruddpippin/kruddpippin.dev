@@ -10,7 +10,7 @@
   --sunny-color:rgba(253,224,71,0.06);
 }
 .root[data-theme="light"]{
-  --bg:#F6F4FF; --bg2:#FFFFFF; --surface:#FFFFFF; --surface2:#F0ECFF;
+  --bg:#f6f4ff5e; --bg2:#ffffff80; --surface:#FFFFFF; --surface2:#F0ECFF;
   --border:rgba(22,14,38,.10); --border2:rgba(22,14,38,.18);
   --text:#160E26; --muted:#6A6188;
   --coral:#EE4F38; --violet:#7C53F5; --mint:#10A988;
@@ -112,22 +112,7 @@
 .grad-text{background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
   background-clip:text; -webkit-text-fill-color:transparent;
   animation:grad-flow 5s linear infinite;}
-.hero-video-zone{
-  position:relative; border-radius:24px; overflow:hidden;
-  padding:40px 32px; margin-bottom:10px;
-}
-.hero-bg-video{
-  position:absolute; inset:0; width:100%; height:100%;
-  object-fit:cover; z-index:0; border-radius:24px;
-  opacity:.45;
-}
-.hero-video-overlay{
-  position:absolute; inset:0; z-index:1;
-  background:radial-gradient(ellipse at center, transparent 30%, var(--bg) 85%);
-  border-radius:24px;
-}
-.hero-video-zone .reveal{position:relative; z-index:2;}
-.hero-sub{font-size:clamp(16px,2.4vw,20px); color:#fff; max-width:560px;
+.hero-sub{font-size:clamp(16px,2.4vw,20px); color:#ffffff46; max-width:560px;
   margin:0 auto 30px;}
 .root[data-theme="light"] .hero-sub{color:#4a3f5c;}
 .hero-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px;}
@@ -142,7 +127,7 @@
 .cd-clock{display:flex; align-items:center; gap:4px; font-family:'JetBrains Mono',monospace;
   font-weight:700; font-size:clamp(30px,6vw,46px); position:relative; overflow:hidden;}
 .cd-clock::after{content:""; position:absolute; inset:0; background:linear-gradient(
-  105deg, transparent 35%, rgba(255,255,255,.18) 42%, rgba(255,255,255,.3) 50%,
+  105deg, transparent 35%, rgba(255, 255, 255, 0.115) 42%, rgba(255,255,255,.3) 50%,
   rgba(255,255,255,.18) 58%, transparent 65%); background-size:250% 100%;
   animation:shimmer 3s ease-in-out infinite; pointer-events:none;}
 .cd-clock b{background:var(--grad); background-size:200% auto; -webkit-background-clip:text;
