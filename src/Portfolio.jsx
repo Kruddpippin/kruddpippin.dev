@@ -21,6 +21,7 @@ export default function Portfolio() {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("home");
   const [showTop, setShowTop] = useState(false);
+  const [lampVisible, setLampVisible] = useState(true);
 
   /* auto theme: light 8 AM → dark 7 PM */
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function Portfolio() {
       const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
       setProgress(scrolled * 100);
       setShowTop(h.scrollTop > 600);
+      setLampVisible(h.scrollTop < window.innerHeight);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -79,7 +81,7 @@ export default function Portfolio() {
       <div className="progress" style={{ width: `${progress}%` }} />
 
       {theme === "dark" && (
-        <div className="lamp" aria-hidden="true">
+        <div className="lamp" aria-hidden="true" style={{ opacity: lampVisible ? 1 : 0, transition: "opacity .4s ease" }}>
           <div className="lamp-cord" />
           <div className="lamp-shade">
             <div className="lamp-bulb" />
