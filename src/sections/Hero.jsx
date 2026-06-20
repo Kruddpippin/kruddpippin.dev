@@ -15,21 +15,34 @@ export default function Hero({ go }) {
           <Sparkles size={14} /> Available for new projects
         </Reveal>
 
-        <Reveal delay={80}>
-          <h1 className="hero-title">
-            Beautiful pages.
-            <br />
-            <span className="grad-text">Shipped in 72 hours.</span>
-          </h1>
-        </Reveal>
+        <div className="hero-video-zone">
+          <video
+            className="hero-bg-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden
+            src="/hero-bg.mp4"
+          />
+          <div className="hero-video-overlay" aria-hidden />
 
-        <Reveal delay={160} className="hero-sub">
-          {CONFIG.role}
-        </Reveal>
+          <Reveal delay={80}>
+            <h1 className="hero-title">
+              Beautiful pages.
+              <br />
+              <span className="grad-text">Shipped in 72 hours.</span>
+            </h1>
+          </Reveal>
 
-        <Reveal delay={220}>
-          <Countdown />
-        </Reveal>
+          <Reveal delay={160} className="hero-sub">
+            {CONFIG.role}
+          </Reveal>
+
+          <Reveal delay={220}>
+            <Countdown />
+          </Reveal>
+        </div>
 
         <Reveal delay={300} className="hero-cta">
           <button className="btn btn-primary big" onClick={() => go("contact")}>
