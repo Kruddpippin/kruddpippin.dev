@@ -1,7 +1,7 @@
 const CONFIG = {
   brand: "KRUDDPIPPIN",
   fullName: "Opara, Precious Chibuzor",
-  role: "I build landing pages that load fast and convert — shipped in 72 hours.",
+  role: "We build landing pages that load fast and convert — shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",
   email: "precious.op2013@gmail.com",
   calendly: "#",

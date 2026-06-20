@@ -16,14 +16,11 @@ export default function Hero({ go }) {
         </Reveal>
 
         <div className="hero-video-zone">
-          <video
+          <img
             className="hero-bg-video"
-            autoPlay
-            loop
-            muted
-            playsInline
             aria-hidden
-            src="/hero-bg.mp4"
+            src="https://res.cloudinary.com/dw7fjuhra/image/upload/v1781991173/72ddcff9-ffa3-4634-9853-e0e20a44ea33_wscdtd.png"
+            alt=""
           />
           <div className="hero-video-overlay" aria-hidden />
 
@@ -35,14 +32,14 @@ export default function Hero({ go }) {
             </h1>
           </Reveal>
 
-          <Reveal delay={160} className="hero-sub">
-            {CONFIG.role}
-          </Reveal>
-
           <Reveal delay={220}>
             <Countdown />
           </Reveal>
         </div>
+
+        <Reveal delay={260} className="hero-sub">
+          {CONFIG.role}
+        </Reveal>
 
         <Reveal delay={300} className="hero-cta">
           <button className="btn btn-primary big" onClick={() => go("contact")}>
