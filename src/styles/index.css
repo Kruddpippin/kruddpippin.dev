@@ -129,6 +129,7 @@
 .hero-video-zone .reveal{position:relative; z-index:2;}
 .hero-sub{font-size:clamp(16px,2.4vw,20px); color:#fff; max-width:560px;
   margin:0 auto 30px;}
+.root[data-theme="light"] .hero-sub{color:#4a3f5c;}
 .hero-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px;}
 
 /* countdown signature */
