@@ -13,7 +13,6 @@ import Faq from "./sections/Faq.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
 import ChatBox from "./components/ChatBox.jsx";
-import "./styles/index.css";
 
 export default function Portfolio() {
   const [theme, setTheme] = useState(getScheduledTheme);
