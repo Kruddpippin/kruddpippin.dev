@@ -110,6 +110,14 @@ const CONFIG = {
       screenshot: "/photo-studio.jpg.png",
       live: "#",
     },
+    {
+      title: "Hotel Management System",
+      type: "Full-stack hotel management platform",
+      stack: ["Full-Stack", "Dashboard"],
+      grad: "linear-gradient(135deg,#1a1a2e,#16213e 55%,#0f3460)",
+      screenshot: "/stayflow.png",
+      live: "https://stayflow-hms.vercel.app",
+    },
   ],
   testimonials: [
     {
