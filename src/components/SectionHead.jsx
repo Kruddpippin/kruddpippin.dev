@@ -1,10 +1,10 @@
 import Reveal from "./Reveal.jsx";
 
-export default function SectionHead({ kicker, title }) {
+export default function SectionHead({ title, lead }) {
   return (
     <Reveal className="section-head">
-      <span className="kicker">{kicker}</span>
       <h2>{title}</h2>
+      {lead && <p className="section-lead">{lead}</p>}
     </Reveal>
   );
 }

@@ -10,7 +10,6 @@ export default function About() {
   return (
     <section id="about" className="wrap section about">
       <Reveal className="about-text">
-        <span className="kicker">About</span>
         <h2>
           I'm {CONFIG.fullName}. I make businesses look like they mean business.
         </h2>

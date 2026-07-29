@@ -1,4 +1,4 @@
-import { Sparkles, Rocket, ArrowUpRight } from "lucide-react";
+import { Rocket, ArrowUpRight } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
 import Countdown from "../components/Countdown.jsx";
 import Dot from "../components/Dot.jsx";
@@ -7,19 +7,19 @@ import CONFIG from "../data/config.js";
 export default function Hero({ go }) {
   return (
     <section id="home" className="hero">
-      <div className="aurora" aria-hidden />
+      <div className="hero-glow" aria-hidden />
       <div className="grain" aria-hidden />
 
       <div className="hero-inner">
-        <Reveal className="eyebrow">
-          <Sparkles size={14} /> Available for new projects
+        <Reveal className="available">
+          <span className="available-dot" /> Available for new projects
         </Reveal>
 
         <Reveal delay={80}>
           <h1 className="hero-title">
             Beautiful pages.
             <br />
-            <span className="grad-text">Shipped in 72 hours.</span>
+            <em>Shipped in 72 hours.</em>
           </h1>
         </Reveal>
 

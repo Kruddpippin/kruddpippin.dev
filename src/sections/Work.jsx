@@ -6,7 +6,7 @@ import CONFIG from "../data/config.js";
 export default function Work() {
   return (
     <section id="work" className="wrap section">
-      <SectionHead kicker="Selected work" title="Pages that earn their keep" />
+      <SectionHead title="Pages that earn their keep" />
       <div className="work-grid">
         {CONFIG.projects.map((p, i) => (
           <Reveal key={p.title} delay={i * 80} className="work-card">
@@ -29,7 +29,6 @@ export default function Work() {
                   : { background: p.grad }
               }
             >
-              <span className="browser-dots"><i /><i /><i /></span>
               <span className="work-visit">
                 Visit <ArrowUpRight size={16} />
               </span>

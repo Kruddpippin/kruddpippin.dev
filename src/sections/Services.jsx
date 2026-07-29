@@ -6,10 +6,7 @@ import CONFIG from "../data/config.js";
 export default function Services({ go }) {
   return (
     <section id="services" className="wrap section">
-      <SectionHead
-        kicker="Packages"
-        title="One clear price. One clear deadline."
-      />
+      <SectionHead title="One clear price. One clear deadline." />
       <div className="price-grid">
         {CONFIG.packages.map((pkg, i) => (
           <Reveal

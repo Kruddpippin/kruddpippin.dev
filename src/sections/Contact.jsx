@@ -50,7 +50,6 @@ export default function Contact() {
     <section id="contact" className="wrap section">
       <div className="contact">
         <Reveal className="contact-left">
-          <span className="kicker">Start here</span>
           <h2>Have a page that needs building?</h2>
           <p>
             Tell me what you're working on. I'll reply within a day with a
@@ -132,10 +131,10 @@ export default function Contact() {
             />
           </label>
           {sendError && (
-            <p style={{ color: "var(--coral)", fontSize: 13, margin: 0 }}>{sendError}</p>
+            <p style={{ color: "var(--rust)", fontSize: 13, margin: 0 }}>{sendError}</p>
           )}
           {sent ? (
-            <p style={{ color: "var(--mint)", fontSize: 14, fontWeight: 600, margin: 0 }}>
+            <p style={{ color: "var(--moss)", fontSize: 14, fontWeight: 600, margin: 0 }}>
               <Check size={15} style={{ display: "inline", marginRight: 6 }} />
               Message sent — I'll be in touch soon.
             </p>

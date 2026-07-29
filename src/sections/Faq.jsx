@@ -9,7 +9,7 @@ export default function Faq() {
 
   return (
     <section className="wrap section">
-      <SectionHead kicker="Questions" title="Good to know" />
+      <SectionHead title="Good to know" />
       <div className="faq">
         {CONFIG.faqs.map((f, i) => (
           <Reveal key={f.q} delay={i * 60}>
