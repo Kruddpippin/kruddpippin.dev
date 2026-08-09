@@ -103,6 +103,13 @@ const CONFIG = {
       live: "https://stayflow-hms.vercel.app",
     },
     {
+      title: "Adoza Data Centre",
+      type: "Government youth empowerment platform",
+      stack: ["Full-Stack", "Civic"],
+      grad: "linear-gradient(135deg,#0b3d2e,#1c6e4a 55%,#d4af37)",
+      live: "https://adoza-data-centre.vercel.app/",
+    },
+    {
       title: "Sable Skincare",
       type: "DTC product page",
       stack: ["E-commerce", "Animation"],
