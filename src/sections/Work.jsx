@@ -12,6 +12,8 @@ export default function Work() {
           <Reveal key={p.title} delay={i * 80} className="work-card">
             <a
               href={p.live}
+              target="_blank"
+              rel="noopener noreferrer"
               className="work-thumb"
               style={
                 p.screenshot
