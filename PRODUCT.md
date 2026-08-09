@@ -10,7 +10,7 @@ Small business owners, founders, and marketers who need a landing page, small si
 
 ## Product Purpose
 
-KRUDDPIPPIN is Precious Opara's freelance/solo-agency portfolio site. It sells fixed-price, fast-turnaround web work (72-hour landing pages, small multi-page sites, and small apps) to founders and small businesses worldwide. Success is a visitor believing "this person is fast, skilled, and won't waste my time" and booking a call or sending a brief.
+SIGNAL LABS is Precious Opara's freelance/solo-agency portfolio site. It sells fixed-price, fast-turnaround web work (72-hour landing pages, small multi-page sites, and small apps) to founders and small businesses worldwide. Success is a visitor believing "this person is fast, skilled, and won't waste my time" and booking a call or sending a brief.
 
 ## Brand Personality
 

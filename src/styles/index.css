@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
 
 .root[data-theme="dark"]{
-  --bg:oklch(16% 0.014 45); --bg2:oklch(19% 0.016 45);
-  --surface:oklch(21% 0.017 45); --surface2:oklch(26% 0.02 45);
+  --bg:oklch(15% 0.02 18); --bg2:oklch(18% 0.022 18);
+  --surface:oklch(20% 0.024 18); --surface2:oklch(25% 0.028 18);
   --border:rgba(255,255,255,.09); --border2:rgba(255,255,255,.17);
-  --text:oklch(95% 0.012 60); --muted:oklch(72% 0.02 50);
+  --text:oklch(95% 0.014 30); --muted:oklch(72% 0.025 28);
   --accent:oklch(65% 0.16 38); --accent-strong:oklch(58% 0.17 35); --accent-ink:#fff;
   --moss:oklch(74% 0.1 152); --rust:oklch(65% 0.19 27);
   --shadow:rgba(0,0,0,.4);
 }
 .root[data-theme="light"]{
-  --bg:oklch(98% 0.005 60); --bg2:oklch(99% 0.003 60);
-  --surface:oklch(100% 0 0); --surface2:oklch(95% 0.011 50);
-  --border:rgba(35,22,10,.11); --border2:rgba(35,22,10,.2);
-  --text:oklch(22% 0.02 50); --muted:oklch(43% 0.025 50);
+  --bg:oklch(96.5% 0.02 18); --bg2:oklch(97.5% 0.015 18);
+  --surface:oklch(99% 0.008 18); --surface2:oklch(93.5% 0.025 18);
+  --border:rgba(77,17,25,.13); --border2:rgba(77,17,25,.22);
+  --text:oklch(20% 0.035 18); --muted:oklch(42% 0.04 18);
   --accent:oklch(55% 0.17 36); --accent-strong:oklch(48% 0.18 33); --accent-ink:#fff;
   --moss:oklch(48% 0.1 152); --rust:oklch(50% 0.19 27);
-  --shadow:rgba(35,22,10,.16);
+  --shadow:rgba(77,17,25,.18);
 }
 
 .root{
@@ -393,12 +393,12 @@
 }
 
 /* 404 page (standalone — not wrapped in .root, so no CSS custom properties) */
-.page_404{padding:80px 24px; min-height:100vh; background:oklch(16% 0.014 45); color:oklch(95% 0.012 60);
+.page_404{padding:80px 24px; min-height:100vh; background:oklch(15% 0.02 18); color:oklch(95% 0.014 30);
   font-family:'Fraunces',serif; text-align:center;}
 .four_zero_four_bg h1{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(64px,14vw,120px); margin:0; letter-spacing:-.02em;}
 .contant_box_404{margin-top:12px;}
 .contant_box_404 h3{font-size:24px; margin-bottom:8px; font-family:'Fraunces',serif; font-weight:600;}
-.contant_box_404 p{color:oklch(72% 0.02 50); margin-bottom:24px; font-family:'Inter',sans-serif;}
+.contant_box_404 p{color:oklch(72% 0.025 28); margin-bottom:24px; font-family:'Inter',sans-serif;}
 .link_404{
   color:#fff !important; padding:11px 22px; background:oklch(65% 0.16 38);
   margin:0; display:inline-block; text-decoration:none;

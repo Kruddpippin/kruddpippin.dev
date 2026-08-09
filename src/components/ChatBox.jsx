@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send } from "lucide-react";
 
-const WELCOME = "Hi! I'm the KRUDDPIPPIN assistant. Ask me anything about services, pricing, the process, or how to get started.";
+const WELCOME = "Hi! I'm the SIGNAL LABS assistant. Ask me anything about services, pricing, the process, or how to get started.";
 
 export default function ChatBox() {
   const [open, setOpen] = useState(false);
@@ -62,7 +62,7 @@ export default function ChatBox() {
         <div className="chat-header">
           <div className="chat-header-info">
             <span className="brand-dot" />
-            <span>KRUDDPIPPIN Assistant</span>
+            <span>SIGNAL LABS Assistant</span>
           </div>
           <button className="icon-btn" onClick={() => setOpen(false)} aria-label="Close chat">
             <X size={16} />

@@ -1,5 +1,5 @@
 const CONFIG = {
-  brand: "KRUDDPIPPIN",
+  brand: "SIGNAL LABS",
   fullName: "Opara, Precious Chibuzor",
   role: "We build landing pages that load fast and convert — shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",

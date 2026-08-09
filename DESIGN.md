@@ -1,5 +1,5 @@
 ---
-name: KRUDDPIPPIN
+name: SIGNAL LABS
 description: Warm, editorial freelance/agency portfolio — fast pages, made by a person, not a template.
 colors:
   bg-dark: "oklch(16% 0.014 45)"
@@ -56,7 +56,7 @@ components:
     padding: "11px 20px"
 ---
 
-# Design System: KRUDDPIPPIN
+# Design System: SIGNAL LABS
 
 ## 1. Overview
 
