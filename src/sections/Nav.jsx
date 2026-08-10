@@ -14,7 +14,7 @@ export default function Nav({ theme, setTheme, menuOpen, setMenuOpen, active, go
     <>
       <header className="nav">
         <button className="brand" onClick={() => go("home")} aria-label="Home">
-          <span className="brand-dot" />
+          <img src="/logo.svg" alt="" className="brand-logo" />
           {CONFIG.brand}
         </button>
 

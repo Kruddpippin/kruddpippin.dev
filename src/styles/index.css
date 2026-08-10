@@ -46,7 +46,7 @@
   z-index:-1; border-bottom:1px solid var(--border);}
 .brand{display:flex; align-items:center; gap:9px; font-family:'Fraunces',serif;
   font-weight:600; font-size:20px; letter-spacing:-.01em;}
-.brand-dot{width:9px; height:9px; border-radius:50%; background:var(--accent);}
+.brand-logo{width:26px; height:26px; border-radius:7px; display:block;}
 .nav-links{display:flex; gap:4px;}
 .nav-link{padding:8px 14px; border-radius:8px; font-size:14px; font-weight:500;
   color:var(--muted); transition:.2s;}
