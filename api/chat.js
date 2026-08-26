@@ -29,7 +29,7 @@ Ongoing maintenance: unlimited small edits, monthly performance check, hosting &
 If delivery is ever late, the client gets their money back. No lock-in — client owns all code.
 
 ## Contact
-Email: precious.op2013@gmail.com
+Email: signallabs42@gmail.com
 GitHub: https://github.com/kruddpippin
 LinkedIn: https://linkedin.com/in/precious-opara-511827231
 

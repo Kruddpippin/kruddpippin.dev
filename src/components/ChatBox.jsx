@@ -41,7 +41,7 @@ export default function ChatBox() {
           role: "assistant",
           content: isApiMissing
             ? "The chat API isn't reachable — run the site with `vercel dev` locally, or check that ANTHROPIC_API_KEY is set in Vercel."
-            : "Something went wrong. Email precious.op2013@gmail.com directly and I'll get back to you.",
+            : "Something went wrong. Email signallabs42@gmail.com directly and I'll get back to you.",
         },
       ]);
     } finally {
