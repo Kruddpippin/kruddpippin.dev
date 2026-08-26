@@ -1,5 +1,4 @@
 import { Rocket, ArrowUpRight } from "lucide-react";
-import Reveal from "../components/Reveal.jsx";
 import Countdown from "../components/Countdown.jsx";
 import Dot from "../components/Dot.jsx";
 import CONFIG from "../data/config.js";
@@ -12,38 +11,31 @@ export default function Hero({ go }) {
 
       <div className="hero-grid">
         <div className="hero-copy">
-          <Reveal className="available">
+          <span className="available">
             <span className="available-dot" /> Available for new projects
-          </Reveal>
+          </span>
 
-          <Reveal delay={80}>
-            <h1 className="hero-title">
-              Beautiful pages.
-              <br />
-              <em>Shipped in 72 hours.</em>
-            </h1>
-          </Reveal>
+          <h1 className="hero-title">
+            Beautiful pages.
+            <br />
+            <em>Shipped in 72 hours.</em>
+          </h1>
 
-          <Reveal delay={220}>
-            <Countdown />
-          </Reveal>
+          <Countdown />
 
-          <Reveal delay={260} className="hero-sub">
-            {CONFIG.role}
-          </Reveal>
+          <p className="hero-sub">{CONFIG.role}</p>
 
-          <Reveal delay={300} className="hero-cta">
+          <div className="hero-cta">
             <button className="btn btn-primary big" onClick={() => go("contact")}>
               <Rocket size={18} /> Start a project
             </button>
             <button className="btn btn-ghost big" onClick={() => go("work")}>
               See the work <ArrowUpRight size={18} />
             </button>
-          </Reveal>
+          </div>
         </div>
 
-        <Reveal
-          delay={140}
+        <div
           className="hero-art"
           style={{ backgroundImage: `url(${CONFIG.heroImage})` }}
         >
@@ -52,7 +44,7 @@ export default function Hero({ go }) {
             <br />
             convert
           </div>
-        </Reveal>
+        </div>
       </div>
 
       <div className="marquee" aria-hidden>
