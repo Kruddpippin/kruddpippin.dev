@@ -16,9 +16,9 @@ export default function Hero({ go }) {
           </span>
 
           <h1 className="hero-title">
-            Beautiful pages.
+            A landing page that's live in 72 hours.
             <br />
-            <em>Shipped in 72 hours.</em>
+            <em>Late, and it's free.</em>
           </h1>
 
           <DeliveryStrip />
