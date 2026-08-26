@@ -2,15 +2,17 @@ import { useState, useEffect, useRef } from "react";
 
 export default function CountUp({ value, suffix = "", decimals = 0 }) {
   const ref = useRef(null);
-  const [n, setN] = useState(0);
+  const [n, setN] = useState(value);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const io = new IntersectionObserver(
       ([e]) => {
         if (!e.isIntersecting) return;
         io.unobserve(el);
-        const dur = 1400;
+        setN(0);
+        const dur = 800;
         const start = performance.now();
         const tick = (t) => {
           const p = Math.min((t - start) / dur, 1);
