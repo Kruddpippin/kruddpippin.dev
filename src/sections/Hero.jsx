@@ -35,10 +35,16 @@ export default function Hero({ go }) {
           </div>
         </div>
 
-        <div
-          className="hero-art"
-          style={{ backgroundImage: `url(${CONFIG.heroImage})` }}
-        />
+        <div className="hero-art">
+          <img
+            src={CONFIG.heroImage}
+            alt="Screenshot of the DIDI COUTURE site, built by Signal Labs"
+            width={CONFIG.heroImageWidth}
+            height={CONFIG.heroImageHeight}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </div>
       </div>
 
       <div className="marquee" aria-hidden>
