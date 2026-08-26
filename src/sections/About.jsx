@@ -14,11 +14,11 @@ export default function About() {
       <div className="statement-main">
         <Reveal>
           <h2>
-            I'm {CONFIG.fullName}. I make businesses look like
-            they mean <em>business</em>.
+            Signal Labs builds businesses that look like they
+            mean <em>business</em>.
           </h2>
           <p>
-            Let's build you a fast, modern landing page with React and Vite, the same
+            We build fast, modern landing pages with React and Vite, the same
             tools the best product teams use. Most freelance work goes quiet for
             a week and shows up late. We do the opposite: a fixed price, a fixed
             deadline, and clear updates the whole way through.
