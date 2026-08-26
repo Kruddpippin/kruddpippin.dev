@@ -15,6 +15,7 @@ export default function Work() {
               target="_blank"
               rel="noopener noreferrer"
               className="work-thumb"
+              aria-label={`Visit ${p.title}`}
               style={
                 p.screenshot
                   ? {

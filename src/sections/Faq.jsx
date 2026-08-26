@@ -16,12 +16,14 @@ export default function Faq() {
             <button
               className={`faq-item ${openFaq === i ? "open" : ""}`}
               onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+              aria-expanded={openFaq === i}
+              aria-controls={`faq-answer-${i}`}
             >
               <span className="faq-q">
                 {f.q}
                 <ChevronDown size={18} className="faq-chev" />
               </span>
-              <span className="faq-a">{f.a}</span>
+              <span className="faq-a" id={`faq-answer-${i}`} aria-hidden={openFaq !== i}>{f.a}</span>
             </button>
           </Reveal>
         ))}
