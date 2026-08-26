@@ -45,7 +45,7 @@
 .nav::before{content:""; position:absolute; inset:0; background:var(--bg);
   z-index:-1; border-bottom:1px solid var(--border);}
 .brand{display:flex; align-items:center; gap:9px; font-family:'Archivo',sans-serif;
-  font-weight:800; font-size:19px; letter-spacing:-.03em;}
+  font-weight:800; font-size:19px; letter-spacing:0;}
 .brand-logo{width:24px; height:24px; border-radius:4px; display:block;}
 .nav-links{display:flex; gap:30px;}
 .nav-link{padding:6px 0; font-size:13px; font-weight:600; color:var(--muted);
@@ -97,7 +97,7 @@
   box-shadow:0 0 0 3px color-mix(in oklch, var(--moss) 22%, transparent);
   animation:pulse-dot 2.4s ease-in-out infinite;}
 .hero-title{font-family:'Archivo',sans-serif; font-weight:800; line-height:.98;
-  font-size:clamp(38px,5.2vw,62px); letter-spacing:-.035em; margin:0 0 22px;}
+  font-size:clamp(38px,5.2vw,62px); letter-spacing:-.02em; margin:0 0 22px;}
 .hero-title em{font-style:normal; color:var(--accent);}
 .hero-sub{font-size:16px; color:var(--muted); max-width:400px; margin:0 0 30px;}
 .hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px;}
@@ -110,7 +110,7 @@
 .art-sticker{position:absolute; z-index:1; top:9%; left:8%; width:114px; height:114px;
   display:grid; place-content:center; text-align:center; background:var(--accent);
   color:var(--accent-ink); border-radius:50%; font-family:'Archivo',sans-serif;
-  font-weight:800; font-size:13px; line-height:1.2; letter-spacing:-.01em;
+  font-weight:800; font-size:13px; line-height:1.2; letter-spacing:0;
   transform:rotate(-10deg);}
 
 /* delivery strip (static Day 0 -> Day 3, replaces the countdown clock) */
@@ -145,13 +145,13 @@
 .stat{flex:1; padding:0 22px; border-inline-start:1px solid var(--border);}
 .stat:first-child{border-inline-start:none; padding-inline-start:0;}
 .stat-num{font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(28px,4.4vw,42px);
-  color:var(--text); letter-spacing:-.03em;}
+  color:var(--text); letter-spacing:-.015em;}
 .stat-label{font-size:13px; color:var(--muted); margin-top:6px;}
 
 /* section head */
 .section-head{margin-bottom:48px; max-width:44ch;}
 .section-head h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(28px,4.2vw,42px);
-  letter-spacing:-.03em; margin:0; max-width:16ch; line-height:1.04;}
+  letter-spacing:-.015em; margin:0; max-width:16ch; line-height:1.04;}
 .section-lead{color:var(--muted); font-size:15.5px; margin:12px 0 0; max-width:40ch;}
 
 /* work */
@@ -167,7 +167,7 @@
   gap:6px; color:#fff; font-weight:700; font-size:13px; opacity:0; transform:translateY(6px); transition:.3s;}
 .work-card:hover .work-visit{opacity:1; transform:translateY(0);}
 .work-meta{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; padding:16px 2px 0;}
-.work-meta h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; margin:0; letter-spacing:-.015em;}
+.work-meta h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; margin:0; letter-spacing:0;}
 .work-meta p{color:var(--muted); font-size:13.5px; margin:2px 0 0;}
 .tags{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
 .tags span{font-size:10.5px; font-family:'JetBrains Mono',monospace; padding:4px 9px;
@@ -182,8 +182,8 @@
 .price-tag{position:absolute; top:-11px; left:26px; font-size:11px; font-weight:700;
   font-family:'JetBrains Mono',monospace; letter-spacing:.04em; text-transform:uppercase;
   padding:5px 12px; border-radius:30px; background:var(--accent); color:var(--accent-ink);}
-.price-card h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; margin:6px 0 0; letter-spacing:-.01em;}
-.price{font-family:'Archivo',sans-serif; font-weight:800; font-size:40px; margin:8px 0 2px; letter-spacing:-.02em;}
+.price-card h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; margin:6px 0 0; letter-spacing:0;}
+.price{font-family:'Archivo',sans-serif; font-weight:800; font-size:40px; margin:8px 0 2px; letter-spacing:-.015em;}
 .price span{font-size:16px; color:var(--muted); font-weight:400; font-family:'Inter',sans-serif;}
 .price-blurb{color:var(--muted); font-size:14px; min-height:42px;}
 .price-card ul{list-style:none; padding:0; margin:18px 0 24px; display:flex; flex-direction:column; gap:11px; flex:1;}
@@ -201,14 +201,14 @@
   margin-bottom:20px;}
 .step-day{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
   text-transform:uppercase; color:var(--muted);}
-.step h4{font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; margin:6px 0 8px; letter-spacing:-.01em;}
+.step h4{font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; margin:6px 0 8px; letter-spacing:0;}
 .step p{font-size:14px; color:var(--muted); margin:0; line-height:1.55;}
 
 /* testimonials — one featured, two secondary */
 .quotes{display:grid; grid-template-columns:1.3fr 1fr; gap:24px; align-items:start;}
 .quote-card{padding:30px; border:1px solid var(--border); border-radius:3px; background:var(--surface);}
 .quote-card.lead{grid-row:span 2; display:flex; flex-direction:column; justify-content:space-between; padding:38px;}
-.quote-card.lead p{font-family:'Inter',sans-serif; font-size:21px; font-weight:500; line-height:1.42; letter-spacing:-.01em;}
+.quote-card.lead p{font-family:'Inter',sans-serif; font-size:21px; font-weight:500; line-height:1.42; letter-spacing:0;}
 .quote-card p{font-size:15px; margin:0 0 22px; color:var(--text);}
 .quote-by{display:flex; align-items:center; gap:12px;}
 .avatar{width:38px; height:38px; border-radius:50%; display:grid; place-items:center;
@@ -221,7 +221,7 @@
 .statement-kicker{text-transform:uppercase; letter-spacing:.14em; font-size:11px; font-weight:700;
   color:var(--muted); padding-top:10px;}
 .statement-main h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(30px,4.4vw,46px);
-  letter-spacing:-.03em; margin:0 0 20px; line-height:1.06; max-width:20ch;}
+  letter-spacing:-.015em; margin:0 0 20px; line-height:1.06; max-width:20ch;}
 .statement-main h2 em{font-style:normal; color:var(--accent);}
 .statement-main p{color:var(--muted); font-size:16px; max-width:56ch; margin:0 0 14px;}
 .muted-line{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--muted);}
@@ -242,7 +242,7 @@
   background:var(--surface); padding:18px 22px; transition:.25s;}
 .faq-item:hover{border-color:var(--border2);}
 .faq-q{display:flex; justify-content:space-between; align-items:center; gap:14px;
-  font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; letter-spacing:-.01em;}
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; letter-spacing:0;}
 .faq-chev{transition:.3s; color:var(--muted); flex-shrink:0;}
 .faq-item.open .faq-chev{transform:rotate(180deg); color:var(--accent);}
 .faq-a{display:grid; grid-template-rows:0fr; opacity:0; transition:.32s ease; color:var(--muted); font-size:14.5px;}
@@ -256,7 +256,7 @@
 .contact-inner{max-width:1120px; margin:0 auto;}
 .contact{display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:start;}
 .contact-left h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(30px,4.2vw,44px);
-  letter-spacing:-.03em; margin:0 0 16px; line-height:1.04; color:var(--ink-on-accent);}
+  letter-spacing:-.015em; margin:0 0 16px; line-height:1.04; color:var(--ink-on-accent);}
 .contact-left p{color:color-mix(in oklch, var(--ink-on-accent) 75%, transparent); margin:0 0 26px; max-width:42ch;}
 .email-copy{display:flex; align-items:center; gap:10px; padding:14px 18px;
   border:1px solid color-mix(in oklch, var(--ink-on-accent) 30%, transparent);
@@ -434,7 +434,7 @@
 /* 404 page (standalone — not wrapped in .root, so no CSS custom properties) */
 .page_404{padding:80px 24px; min-height:100vh; background:oklch(15% 0.02 18); color:oklch(95% 0.014 30);
   font-family:'Archivo',sans-serif; text-align:center;}
-.four_zero_four_bg h1{font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(64px,14vw,120px); margin:0; letter-spacing:-.04em;}
+.four_zero_four_bg h1{font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(64px,14vw,120px); margin:0; letter-spacing:-.02em;}
 .contant_box_404{margin-top:12px;}
 .contant_box_404 h3{font-size:22px; margin-bottom:8px; font-family:'Archivo',sans-serif; font-weight:700;}
 .contant_box_404 p{color:oklch(72% 0.025 28); margin-bottom:24px; font-family:'Inter',sans-serif;}
