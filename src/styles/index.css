@@ -35,7 +35,7 @@
   -webkit-font-smoothing:antialiased;
 }
 .root *{box-sizing:border-box;}
-.root button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
+button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
 .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
 .section{padding:112px 24px;}
 .section-label{
