@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight, Zap, Clock } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
+import WhatsAppIcon from "../components/WhatsAppIcon.jsx";
 import CONFIG from "../data/config.js";
 
 export default function Contact() {
@@ -64,6 +65,17 @@ export default function Contact() {
               }
             </span>
           </button>
+          <a
+            href={CONFIG.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="email-copy"
+          >
+            <WhatsAppIcon size={16} /> {CONFIG.whatsappDisplay}
+            <span className="copy-state">
+              <ArrowUpRight size={14} /> WhatsApp
+            </span>
+          </a>
           <div className="socials">
             <a href={CONFIG.socials.github} aria-label="GitHub"><Github size={18} /></a>
             <a href={CONFIG.socials.linkedin} aria-label="LinkedIn"><Linkedin size={18} /></a>

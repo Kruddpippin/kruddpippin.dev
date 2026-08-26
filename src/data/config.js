@@ -4,6 +4,8 @@ const CONFIG = {
   location: "Abuja, Nigeria · Working with clients worldwide",
   heroImage: "/hero-showcase.jpg",
   email: "signallabs42@gmail.com",
+  whatsappDisplay: "+234 701 428 0380",
+  whatsapp: "https://wa.me/2347014280380?text=Hi%20Signal%20Labs%2C%20I%27d%20like%20a%20page%20built.",
   calendly: "#",
   socials: {
     github: "https://github.com/kruddpippin",
