@@ -1,5 +1,5 @@
 import { Rocket, ArrowUpRight } from "lucide-react";
-import Countdown from "../components/Countdown.jsx";
+import DeliveryStrip from "../components/DeliveryStrip.jsx";
 import Dot from "../components/Dot.jsx";
 import CONFIG from "../data/config.js";
 
@@ -21,7 +21,7 @@ export default function Hero({ go }) {
             <em>Shipped in 72 hours.</em>
           </h1>
 
-          <Countdown />
+          <DeliveryStrip />
 
           <p className="hero-sub">{CONFIG.role}</p>
 

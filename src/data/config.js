@@ -10,6 +10,12 @@ const CONFIG = {
     linkedin: "https://linkedin.com/in/precious-opara-511827231",
     x: "https://x.com/kruddpippin",
   },
+  process: [
+    { day: "Day 0", t: "Brief", d: "You send your content, brand and one reference. The clock starts." },
+    { day: "Day 1–2", t: "Build", d: "I design and build your page, sending updates so you're never in the dark." },
+    { day: "Day 2", t: "Polish", d: "Speed, responsiveness and copy tightened until it's genuinely fast." },
+    { day: "Day 3", t: "Ship", d: "Deployed live under your account, code handed over. You're ready to sell." },
+  ],
   stats: [
     { value: 30, suffix: "+", label: "Pages shipped" },
     { value: 72, suffix: "h", label: "Average turnaround" },
