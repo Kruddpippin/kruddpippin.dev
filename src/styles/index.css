@@ -164,9 +164,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
 .section-lead{color:var(--text-mute); font-size:15.5px; margin:12px 0 0; max-width:40ch;}
 
 /* work */
-.work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
-.work-card{border-radius:0;}
-.work-thumb{display:block; aspect-ratio:4/5; border-radius:3px; position:relative; overflow:hidden;
+.work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:stretch;}
+.work-card{border-radius:0; display:grid; grid-template-rows:auto auto auto 1fr;}
+.work-thumb{display:block; aspect-ratio:16/10; border-radius:3px; position:relative; overflow:hidden;
   border:1px solid var(--line); filter:saturate(.82);
   transition:filter .35s, transform .35s, box-shadow .35s, border-color .35s;}
 .work-thumb::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,.12);}
@@ -175,10 +175,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
 .work-visit{position:absolute; bottom:16px; right:18px; z-index:2; display:flex; align-items:center;
   gap:6px; color:#fff; font-weight:700; font-size:13px; opacity:0; transform:translateY(6px); transition:.3s;}
 .work-card:hover .work-visit{opacity:1; transform:translateY(0);}
-.work-meta{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; padding:16px 2px 0;}
-.work-meta h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:var(--fs-h4); line-height:1.3; margin:0; letter-spacing:0;}
-.work-meta p{color:var(--text-mute); font-size:13.5px; margin:2px 0 0;}
-.tags{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
+.work-card h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:var(--fs-h4); line-height:1.3; margin:16px 2px 0; letter-spacing:0;}
+.work-type{color:var(--text-mute); font-size:13.5px; margin:2px 2px 0;}
+.tags{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-start; align-self:end; padding:10px 2px 0;}
 .tags span{font-size:var(--fs-mono); line-height:1.4; letter-spacing:.12em; text-transform:uppercase;
   font-family:'JetBrains Mono',monospace; padding:4px 9px;
   border:1px solid var(--line); border-radius:30px; color:var(--text-mute);}

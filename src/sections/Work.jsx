@@ -20,13 +20,13 @@ export default function Work() {
                   ? {
                       backgroundImage: `url(${p.screenshot}), ${p.grad}`,
                       backgroundSize: "cover, cover",
-                      backgroundPosition: "top center, center",
+                      backgroundPosition: "top left, center",
                     }
                   : p.live !== "#"
                   ? {
                       backgroundImage: `url(https://image.thum.io/get/width/1200/crop/630/${p.live}), ${p.grad}`,
                       backgroundSize: "cover, cover",
-                      backgroundPosition: "top center, center",
+                      backgroundPosition: "top left, center",
                     }
                   : { background: p.grad }
               }
@@ -35,16 +35,12 @@ export default function Work() {
                 Visit <ArrowUpRight size={16} />
               </span>
             </a>
-            <div className="work-meta">
-              <div>
-                <h3>{p.title}</h3>
-                <p>{p.type}</p>
-              </div>
-              <div className="tags">
-                {p.stack.map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
-              </div>
+            <h3>{p.title}</h3>
+            <p className="work-type">{p.type}</p>
+            <div className="tags">
+              {p.stack.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
             </div>
           </Reveal>
         ))}
