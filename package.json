@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.104.1",
     "@kopplin-co/claude-web-design-skill": "^0.1.0",
     "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.468.0",
