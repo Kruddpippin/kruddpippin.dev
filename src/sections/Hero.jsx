@@ -38,13 +38,7 @@ export default function Hero({ go }) {
         <div
           className="hero-art"
           style={{ backgroundImage: `url(${CONFIG.heroImage})` }}
-        >
-          <div className="art-sticker">
-            Built to
-            <br />
-            convert
-          </div>
-        </div>
+        />
       </div>
 
       <div className="marquee" aria-hidden>

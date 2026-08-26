@@ -2,7 +2,7 @@ const CONFIG = {
   brand: "SIGNAL LABS",
   role: "We build landing pages that load fast and convert, shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",
-  heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80",
+  heroImage: "/hero-showcase.jpg",
   email: "signallabs42@gmail.com",
   calendly: "#",
   socials: {
