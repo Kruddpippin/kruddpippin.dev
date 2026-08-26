@@ -129,10 +129,13 @@
 
 /* marquee */
 .marquee{grid-column:1 / -1; overflow:hidden; border-top:1px solid var(--border);
-  padding:16px 0; -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
-.marquee-track{display:flex; width:max-content; animation:scroll 26s linear infinite;}
+  padding:16px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.marquee-track{display:flex; width:max-content; animation:scroll 52s linear infinite;}
 .marquee-track span{display:flex; align-items:center; gap:18px; padding-right:18px;
-  font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; color:var(--muted);
+  font-family:'JetBrains Mono',monospace; font-weight:500; font-size:.8125rem;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--muted); opacity:.55;
   white-space:nowrap;}
 .mq-dot{font-size:9px; color:var(--border2);}
 @keyframes scroll{to{transform:translateX(-50%);}}

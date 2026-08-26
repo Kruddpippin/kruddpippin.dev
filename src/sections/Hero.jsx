@@ -51,9 +51,9 @@ export default function Hero({ go }) {
         <div className="marquee-track">
           {Array.from({ length: 2 }).map((_, i) => (
             <span key={i}>
-              React <Dot /> Vite <Dot /> Conversion <Dot /> Speed <Dot />
-              Landing pages <Dot /> Clean code <Dot /> Mobile-first <Dot />
-              72-hour delivery <Dot />
+              More bookings <Dot /> Faster pages <Dot /> Fixed deadlines <Dot />
+              Mobile-first <Dot /> 72-hour delivery <Dot /> No lock-in <Dot />
+              Clear pricing <Dot /> Landing pages <Dot />
             </span>
           ))}
         </div>
