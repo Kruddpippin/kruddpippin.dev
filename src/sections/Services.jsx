@@ -4,11 +4,14 @@ import SectionHead from "../components/SectionHead.jsx";
 import CONFIG from "../data/config.js";
 
 export default function Services({ go }) {
+  const tiers = CONFIG.packages.filter((pkg) => !pkg.recurring);
+  const carePlan = CONFIG.packages.find((pkg) => pkg.recurring);
+
   return (
     <section id="services" className="wrap section">
       <SectionHead title="One clear price. One clear deadline." />
       <div className="price-grid">
-        {CONFIG.packages.map((pkg, i) => (
+        {tiers.map((pkg, i) => (
           <Reveal
             key={pkg.name}
             delay={staggerDelay(i)}
@@ -38,6 +41,23 @@ export default function Services({ go }) {
           </Reveal>
         ))}
       </div>
+
+      {carePlan && (
+        <Reveal delay={staggerDelay(tiers.length)} className="price-strip">
+          <div className="price-strip-info">
+            <h3>{carePlan.name}</h3>
+            <div className="price">
+              <span className="price-currency">{carePlan.price.slice(0, 1)}</span>
+              {carePlan.price.slice(1)}
+              {carePlan.priceSuffix && <span className="price-suffix">{carePlan.priceSuffix}</span>}
+            </div>
+            <p className="price-strip-blurb">{carePlan.blurb}</p>
+          </div>
+          <button className="btn btn-ghost" onClick={() => go("contact")}>
+            Start a project <ArrowRight size={16} />
+          </button>
+        </Reveal>
+      )}
     </section>
   );
 }

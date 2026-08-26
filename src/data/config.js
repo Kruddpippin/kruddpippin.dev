@@ -73,6 +73,7 @@ const CONFIG = {
       priceSuffix: "/mo",
       tag: "Recurring",
       featured: false,
+      recurring: true,
       blurb: "Keep it fresh: edits, fixes and uptime, handled.",
       features: [
         "Unlimited small edits",

@@ -183,7 +183,7 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
   border:1px solid var(--line); border-radius:30px; color:var(--text-mute);}
 
 /* pricing */
-.price-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; align-items:stretch;}
+.price-grid{display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:1fr; gap:20px; align-items:stretch;}
 .price-card{position:relative; padding:30px 26px; border:1px solid var(--line); border-radius:3px;
   background:var(--surface); display:flex; flex-direction:column; transition:.3s;}
 .price-card:hover{border-color:var(--line-strong);}
@@ -200,6 +200,15 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
 .price-card ul{list-style:none; padding:0; margin:18px 0 24px; display:flex; flex-direction:column; gap:11px; flex:1;}
 .price-card li{display:flex; align-items:flex-start; gap:9px; font-size:14px;}
 .price-card li svg{color:var(--text-mute); flex-shrink:0; margin-top:3px;}
+.price-card > .btn{margin-top:auto;}
+
+.price-strip{display:flex; align-items:center; justify-content:space-between; gap:24px;
+  flex-wrap:wrap; margin-top:20px; padding:26px 28px; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface);}
+.price-strip-info{display:flex; align-items:baseline; gap:18px; flex-wrap:wrap;}
+.price-strip h3{font-family:'Archivo',sans-serif; font-weight:700; font-size:var(--fs-h4); line-height:1.3; margin:0; letter-spacing:0;}
+.price-strip .price{margin:0;}
+.price-strip-blurb{color:var(--text-mute); font-size:14px; max-width:44ch; margin:0;}
 
 /* process — connected rail, real sequence */
 .process{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
@@ -329,7 +338,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
   .stat{flex:1 1 40%; border-inline-start:1px solid var(--line); padding:0 0 0 18px; margin-bottom:20px;}
   .stat:nth-child(odd){border-inline-start:none; padding-inline-start:0;}
   .work-grid{grid-template-columns:repeat(2,1fr);}
-  .price-grid{grid-template-columns:1fr;}
+  .price-grid{grid-template-columns:1fr; grid-auto-rows:auto;}
+  .price-strip{flex-direction:column; align-items:stretch; text-align:left;}
+  .price-strip .btn{width:100%; justify-content:center;}
   .process{grid-template-columns:1fr 1fr; row-gap:36px;}
   .process::before{display:none;}
   .quotes{grid-template-columns:1fr;}
