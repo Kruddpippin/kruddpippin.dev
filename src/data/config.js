@@ -1,8 +1,9 @@
 const CONFIG = {
   brand: "SIGNAL LABS",
   fullName: "Opara, Precious Chibuzor",
-  role: "We build landing pages that load fast and convert — shipped in 72 hours.",
+  role: "We build landing pages that load fast and convert, shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",
+  heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80",
   email: "precious.op2013@gmail.com",
   calendly: "#",
   socials: {
@@ -67,7 +68,7 @@ const CONFIG = {
       priceSuffix: "/mo",
       tag: "Recurring",
       featured: false,
-      blurb: "Keep it fresh — edits, fixes and uptime, handled.",
+      blurb: "Keep it fresh: edits, fixes and uptime, handled.",
       features: [
         "Unlimited small edits",
         "Monthly performance check",
@@ -135,7 +136,7 @@ const CONFIG = {
     },
     {
       quote:
-        "Most developers go quiet for a week. This was the opposite — clear updates the whole way, and the page just worked.",
+        "Most developers go quiet for a week. This was the opposite: clear updates the whole way, and the page just worked.",
       name: "David Oyeniyi.",
       role: "Founder, DTC brand",
     },
@@ -149,7 +150,7 @@ const CONFIG = {
   faqs: [
     {
       q: "Can you really deliver in 72 hours?",
-      a: "Yes — that's the whole point of the Express Page. Once I have your content and brand assets, the clock starts and your page is live in three days. If I'm ever late, you get your money back.",
+      a: "Yes, that's the whole point of the Express Page. Once I have your content and brand assets, the clock starts and your page is live in three days. If I'm ever late, you get your money back.",
     },
     {
       q: "What do you need from me to start?",

@@ -18,11 +18,11 @@ colors:
   rust: "oklch(65% 0.19 27)"
 typography:
   display:
-    fontFamily: "Fraunces, Georgia, serif"
-    fontSize: "clamp(2.5rem, 7.4vw, 4.875rem)"
-    fontWeight: 600
-    lineHeight: 1.04
-    letterSpacing: "-0.025em"
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(2.4rem, 5.2vw, 3.9rem)"
+    fontWeight: 800
+    lineHeight: 0.98
+    letterSpacing: "-0.035em"
   body:
     fontFamily: "Inter, system-ui, sans-serif"
     fontSize: "16px"
@@ -33,10 +33,10 @@ typography:
     fontSize: "12px"
     fontWeight: 700
 rounded:
-  sm: "8px"
-  md: "12px"
-  lg: "14px"
-  xl: "18px"
+  sm: "3px"
+  md: "4px"
+  pill: "30px"
+  circle: "50%"
 spacing:
   sm: "8px"
   md: "16px"
@@ -68,8 +68,9 @@ This system explicitly rejects: tri-color gradients (text, buttons, borders, ava
 
 **Key Characteristics:**
 - One committed accent (clay/terracotta) — no gradients anywhere, ever
-- Fraunces serif for display headings against Inter for body: a real contrast pairing, not two similar grotesques
-- Each section gets its own structural idea (divider-row stats, connected-rail process, featured-quote testimonials) instead of a repeating card template
+- Archivo, a heavy tight-tracked grotesk, for display headings against Inter for body: bold weight and negative letter-spacing carry personality instead of a serif
+- Sharp, near-flat corners (3-4px) on cards, buttons and inputs instead of soft rounded-SaaS shapes; full-pill reserved for tags/chips, true circles for avatars and step markers
+- Each section gets its own structural idea (a split-grid hero with a photographic art panel, divider-row stats, an asymmetric editorial statement section, connected-rail process, featured-quote testimonials, a full-bleed accent-colored contact band) instead of a repeating card template
 - Warm near-black in dark mode, true off-white (not cream) in light mode
 - Flat by default; elevation only appears as a direct response to hover/focus
 
@@ -99,21 +100,21 @@ A single warm, saturated accent carries the brand; everything else is warm-tinte
 
 ## 3. Typography
 
-**Display Font:** Fraunces (serif, optical-size variable, weights 400–700)
+**Display Font:** Archivo (grotesk, weights 600–900)
 **Body Font:** Inter (weights 400–700)
 **Label/Mono Font:** JetBrains Mono (weights 500–700)
 
-**Character:** A warm literary serif against a clean technical grotesque — the contrast pairing this system is built on. Fraunces carries personality and craft into every heading; Inter stays out of the way in body copy; JetBrains Mono is reserved for genuinely technical or numeric moments (the countdown clock, tags, prices' cents-like details) rather than decorating every section as a tracked eyebrow.
+**Character:** A heavy, tightly-tracked grotesk against a clean technical body face. Archivo's weight (700-800) and negative letter-spacing (-0.03 to -0.035em) carry personality into every heading without reaching for serif-as-default-creativity; Inter stays out of the way in body copy; JetBrains Mono is reserved for genuinely technical or numeric moments (the countdown clock, tags, prices' cents-like details) rather than decorating every section as a tracked eyebrow.
 
 ### Hierarchy
-- **Display** (600, `clamp(2.5rem, 7.4vw, 4.875rem)`, line-height 1.04, letter-spacing -0.025em): hero headline only. The `em` child (italic, Clay) is the one permitted emphasis device — used once, on the hero's key phrase, never as a repeating pattern.
-- **Headline** (600, `clamp(1.75rem, 4.2vw, 2.625rem)`, line-height 1.1): section h2s.
-- **Title** (600, 19–22px): card/component headings (work titles, pricing plan names, FAQ questions).
+- **Display** (800, `clamp(2.4rem, 5.2vw, 3.9rem)`, line-height 0.98, letter-spacing -0.035em): hero headline, set in a half-width column beside the hero art panel. The `em` child (Clay, not italicized) is one of exactly two permitted emphasis spots in the system — the hero headline and the statement-section headline — never a repeating pattern.
+- **Headline** (800, `clamp(1.75rem, 4.2vw, 2.875rem)`, line-height 1.04): section h2s.
+- **Title** (700, 18–21px): card/component headings (work titles, pricing plan names, FAQ questions).
 - **Body** (400, 15–16px, line-height 1.6): paragraph copy, max 65–75ch measure via `max-width: 40–44ch` on lead/section text.
 - **Label** (700, 11–13px, JetBrains Mono): tags, day markers, countdown digits, prices' fine print. Not used for section eyebrows — that reflex has been removed entirely.
 
 ### Named Rules
-**The Single Emphasis Rule.** Italic Fraunces in Clay is the one type-level emphasis device in the whole system. It appears once, in the hero. It is not reused as a section-wide "gradient text" substitute.
+**The Single Emphasis Rule.** A bold Clay-colored span in the same grotesk (no italic, no serif substitution) is the one type-level emphasis device in the system. It appears in exactly two places — the hero headline and the statement-section headline — and nowhere else, never as a section-wide "gradient text" substitute.
 
 ## 4. Elevation
 
@@ -129,35 +130,48 @@ Flat by default. Nothing carries a resting shadow. Shadows appear only as a dire
 ## 5. Components
 
 ### Buttons
-- **Shape:** 9px radius, never pill-shaped except chips/tags.
-- **Primary:** solid Clay fill, white text, `11px 20px` padding. No shimmer sweep, no gradient — a plain background-color transition to Clay Deep plus a 2px lift on hover.
+- **Shape:** 4px radius, near-sharp by design; never pill-shaped except chips/tags.
+- **Primary:** solid Clay fill, white text, `12px 20px` padding. No shimmer sweep, no gradient — a plain background-color transition to Clay Deep plus a 3px lift on hover.
 - **Ghost:** 1px `border2` outline, transparent fill, surface2 background on hover.
+- **Nav CTA (signature variant):** not a filled button at all — plain text with a 1px underline and an accent-colored arrow icon, matching the editorial "text-link" treatment used for section links.
 
 ### Chips / Tags
-- **Style:** 6–8px radius, 1px border, muted text; selected state (service picker) fills solid Clay with white text — no gradient fill.
+- **Style:** full-pill radius, 1px border, muted text; selected state (service picker) fills solid Clay with white text — no gradient fill.
 
 ### Cards / Containers
-- **Corner Style:** 12–14px standard, 18px only for the largest containers (contact panel). Never 24px+.
+- **Corner Style:** 3–4px standard, sharp by design (not soft-rounded SaaS cards). Never past 4px except the intentional circle/pill exceptions (avatars, step markers, tags).
 - **Background:** `surface` / `surface2` two-step system; the featured pricing card uses `color-mix(in oklch, var(--accent) 6%, var(--surface))` plus a solid Clay border instead of a gradient border-box trick.
 - **Shadow Strategy:** flat at rest (see Elevation); border-color shift on hover, not shadow, for most cards.
 - **Border:** 1px `border` at rest, `border2` on hover/focus.
 - **Internal Padding:** 22–30px depending on density.
 
 ### Inputs / Fields
-- **Style:** 1px `border`, 9px radius, `bg` fill.
+- **Style:** 1px `border`, 4px radius, `bg` fill.
 - **Focus:** border shifts to Clay plus a 3px `color-mix(in oklch, var(--accent) 18%, transparent)` ring — soft, not a heavy colored glow.
 
 ### Navigation
-- **Style:** solid `bg` background with a 1px bottom border. No backdrop blur / glass effect. Links are plain text that gain a `surface2` pill background only when active.
+- **Style:** solid `bg` background with a 1px bottom border. No backdrop blur / glass effect. Links are plain text that gain a 2px Clay underline only when active, not a filled pill.
+
+### Hero (signature component)
+An asymmetric split grid, not a centered hero: copy (status line, headline, countdown, CTAs) fills the left column, a real photograph fills the right in a sharp-cornered panel with a thin rotated frame line and a circular Clay "sticker" badge overlapping the top-left corner. A full-width marquee strip closes the hero as its own grid row, the one place kinetic text is allowed.
 
 ### Section Head (signature component)
-Every section title is set in Fraunces, no label or eyebrow above it by default. Where a section benefits from a lead-in sentence (optional `lead` prop), it's a plain sentence in muted body copy, not a mono-tracked kicker — and it's used selectively, not as a uniform site-wide pattern.
+Every section title is set in Archivo, no label or eyebrow above it by default. Where a section benefits from a lead-in sentence (optional `lead` prop), it's a plain sentence in muted body copy, not a mono-tracked kicker — and it's used selectively, not as a uniform site-wide pattern.
+
+### Work Grid (signature component)
+Three-column grid of portrait-oriented (4:5) project photography, desaturated at rest and brought to full saturation with a lift on hover. No overlaid index numbers or fake result badges on the images: the image speaks, and title/type/stack tags sit in a plain caption row below it.
 
 ### Process Rail (signature component)
 The four-step process is a real ordered sequence, so it earns numbered markers — rendered as a connected horizontal rail (numbered circles on a hairline) rather than four identical bordered cards. This is the one place numbers are used, because the order is actually meaningful information.
 
+### Statement (signature component)
+The About section reads as an asymmetric editorial statement, not a bio card: a narrow kicker column beside a wide column carrying one large headline (with the system's one other permitted Clay emphasis) and a lead paragraph. A flat, borderless three-item feature row sits underneath, divided from the statement by a single hairline, rather than a bordered card panel.
+
 ### Testimonials (signature component)
-One quote is featured large (Fraunces serif, 22px) spanning two rows in a 1.3fr/1fr grid; the remaining quotes sit smaller beside it. Breaks the identical-card-wall reflex by giving the strongest quote more weight.
+One quote is featured large (Inter, medium weight, 21px) spanning two rows in a 1.3fr/1fr grid; the remaining quotes sit smaller beside it. Breaks the identical-card-wall reflex by giving the strongest quote more weight.
+
+### Contact Band (signature component)
+Contact is the one full-bleed, full-width moment on the page: the entire section fills edge-to-edge with the Clay accent as its background, forcing a fixed warm-ink text color (not the theme's `--text` token) so contrast holds regardless of light/dark mode. Form fields and the email-copy control sit on a paper-colored surface for legibility; the primary button inverts to ink-on-Clay since a Clay-on-Clay button would disappear into the band.
 
 ## 6. Do's and Don'ts
 
@@ -165,7 +179,7 @@ One quote is featured large (Fraunces serif, 22px) spanning two rows in a 1.3fr/
 - **Do** use Clay as the single accent color; reserve Moss/Rust strictly for success/error semantics.
 - **Do** keep shadows flat-at-rest and neutral-toned, appearing only on hover/focus and staying under 16px blur.
 - **Do** vary section structure — divider-row stats, a connected rail for process, an asymmetric testimonial layout — rather than repeating one card template.
-- **Do** use Fraunces for anything that needs personality (headings, prices, quotes) and Inter for anything that needs to disappear (body copy, form labels).
+- **Do** use Archivo (bold, tight-tracked) for anything that needs personality (headings, prices) and Inter for anything that needs to disappear (body copy, form labels, quotes).
 - **Do** check muted text against its background; if it's close to 4.5:1, move it toward ink.
 
 ### Don't:
@@ -174,5 +188,5 @@ One quote is featured large (Fraunces serif, 22px) spanning two rows in a 1.3fr/
 - **Don't** put an uppercase-tracked mono "eyebrow" above every section heading — this repeated identically on all seven sections in the old build and is exactly the AI-generation tell it looks like.
 - **Don't** draw fake browser-chrome dots on project thumbnails.
 - **Don't** pair a 1px border with a ≥16px-blur shadow on the same element ("ghost card").
-- **Don't** round cards past 18px, or buttons past a pill shape used only for tags.
+- **Don't** round cards, buttons or inputs past 4px — the system is sharp by design. Full-pill is reserved for tags/chips only, true circles for avatars and step markers.
 - **Don't** reuse the same card grid (equal-width, equal-height, icon+heading+text) for pricing, process, and testimonials — each of those now has a distinct structure.

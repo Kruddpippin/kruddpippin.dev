@@ -32,7 +32,7 @@ export default function Services({ go }) {
               className={`btn ${pkg.featured ? "btn-primary" : "btn-ghost"} full`}
               onClick={() => go("contact")}
             >
-              Get started <ArrowRight size={16} />
+              Start a project <ArrowRight size={16} />
             </button>
           </Reveal>
         ))}

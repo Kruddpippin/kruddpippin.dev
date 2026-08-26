@@ -38,7 +38,7 @@ export default function Nav({ theme, setTheme, menuOpen, setMenuOpen, active, go
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <button className="btn btn-primary nav-cta" onClick={() => go("contact")}>
+          <button className="nav-cta" onClick={() => go("contact")}>
             Start a project <ArrowRight size={16} />
           </button>
           <button
