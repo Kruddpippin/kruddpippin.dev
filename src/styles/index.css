@@ -158,7 +158,7 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
 .stat-label{font-size:13px; color:var(--text-mute); margin-top:6px;}
 
 /* section head */
-.section-head{margin-bottom:48px; max-width:44ch;}
+.section-head{margin-bottom:48px; max-width:640px;}
 .section-head h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:var(--fs-h2);
   letter-spacing:-.015em; margin:0; max-width:16ch; line-height:1.05;}
 .section-lead{color:var(--text-mute); font-size:15.5px; margin:12px 0 0; max-width:40ch;}
