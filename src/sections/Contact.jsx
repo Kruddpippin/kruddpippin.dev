@@ -131,10 +131,10 @@ export default function Contact() {
             />
           </label>
           {sendError && (
-            <p style={{ color: "var(--ink-on-accent)", fontSize: 13, fontWeight: 700, margin: 0 }}>{sendError}</p>
+            <p style={{ color: "var(--rust)", fontSize: 13, fontWeight: 700, margin: 0 }}>{sendError}</p>
           )}
           {sent ? (
-            <p style={{ color: "var(--ink-on-accent)", fontSize: 14, fontWeight: 700, margin: 0 }}>
+            <p style={{ color: "var(--accent)", fontSize: 14, fontWeight: 700, margin: 0 }}>
               <Check size={15} style={{ display: "inline", marginRight: 6 }} />
               Message sent. I'll be in touch soon.
             </p>
