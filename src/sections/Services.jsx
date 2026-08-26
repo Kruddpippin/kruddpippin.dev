@@ -17,8 +17,9 @@ export default function Services({ go }) {
             {pkg.tag && <span className="price-tag">{pkg.tag}</span>}
             <h3>{pkg.name}</h3>
             <div className="price">
-              {pkg.price}
-              {pkg.priceSuffix && <span>{pkg.priceSuffix}</span>}
+              <span className="price-currency">{pkg.price.slice(0, 1)}</span>
+              {pkg.price.slice(1)}
+              {pkg.priceSuffix && <span className="price-suffix">{pkg.priceSuffix}</span>}
             </div>
             <p className="price-blurb">{pkg.blurb}</p>
             <ul>
