@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight, Zap, Clock } from "lucide-react";
+import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight, ChevronDown, Zap, Clock } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
 import WhatsAppIcon from "../components/WhatsAppIcon.jsx";
 import CONFIG from "../data/config.js";
+
+const PRICED_SERVICES = ["Express Page", "Full Site", "Mobile App", "Care Plan"];
+const OTHER_SERVICES = ["E-commerce Integration", "SEO & Performance Audit", "UI/UX Design", "Branding & Logo"];
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -10,6 +13,14 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [sendError, setSendError] = useState("");
+  const [showOtherServices, setShowOtherServices] = useState(false);
+
+  const toggleService = (service) => (e) => {
+    const updated = e.target.checked
+      ? [...form.services, service]
+      : form.services.filter((s) => s !== service);
+    setForm({ ...form, services: updated });
+  };
 
   const copyEmail = async () => {
     try {
@@ -121,31 +132,35 @@ export default function Contact() {
           <fieldset className="service-select">
             <legend>What do you need?</legend>
             <div className="service-options">
-              {[
-                "Express Page",
-                "Full Site",
-                "Mobile App",
-                "Care Plan",
-                "E-commerce Integration",
-                "SEO & Performance Audit",
-                "UI/UX Design",
-                "Branding & Logo",
-              ].map((service) => (
+              {PRICED_SERVICES.map((service) => (
                 <label key={service} className={`service-chip${form.services.includes(service) ? " selected" : ""}`}>
                   <input
                     type="checkbox"
                     checked={form.services.includes(service)}
-                    onChange={(e) => {
-                      const updated = e.target.checked
-                        ? [...form.services, service]
-                        : form.services.filter((s) => s !== service);
-                      setForm({ ...form, services: updated });
-                    }}
+                    onChange={toggleService(service)}
                   />
                   {service}
                 </label>
               ))}
             </div>
+            {showOtherServices ? (
+              <div className="service-options service-options-secondary">
+                {OTHER_SERVICES.map((service) => (
+                  <label key={service} className={`service-chip${form.services.includes(service) ? " selected" : ""}`}>
+                    <input
+                      type="checkbox"
+                      checked={form.services.includes(service)}
+                      onChange={toggleService(service)}
+                    />
+                    {service}
+                  </label>
+                ))}
+              </div>
+            ) : (
+              <button type="button" className="service-more" onClick={() => setShowOtherServices(true)}>
+                Something else? <ChevronDown size={14} />
+              </button>
+            )}
           </fieldset>
           <label>
             Anything else?

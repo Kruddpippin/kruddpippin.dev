@@ -324,6 +324,10 @@ button{font-family:inherit; cursor:pointer; border:none; background:none; color:
 .service-chip:hover{border-color:var(--accent);}
 .service-chip.selected{background:var(--accent); color:var(--accent-ink); border-color:transparent;}
 .service-chip input[type="checkbox"]{display:none;}
+.service-options-secondary{margin-top:8px;}
+.service-more{display:inline-flex; align-items:center; gap:5px; margin-top:10px;
+  font-size:12.5px; font-weight:600; color:var(--text-mute); transition:.2s;}
+.service-more:hover{color:var(--text);}
 
 /* footer */
 .footer{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
