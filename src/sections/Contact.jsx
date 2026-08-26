@@ -52,7 +52,7 @@ export default function Contact() {
         <Reveal className="contact-left">
           <h2>Have a page that needs building?</h2>
           <p>
-            Tell me what you're working on. I'll reply within a day with a
+            Tell us what you're working on. We'll reply within a day with a
             clear price and a start date.
           </p>
           <button className="email-copy" onClick={copyEmail}>
@@ -136,7 +136,7 @@ export default function Contact() {
           {sent ? (
             <p style={{ color: "var(--accent)", fontSize: 14, fontWeight: 700, margin: 0 }}>
               <Check size={15} style={{ display: "inline", marginRight: 6 }} />
-              Message sent. I'll be in touch soon.
+              Message sent. We'll be in touch soon.
             </p>
           ) : (
             <button

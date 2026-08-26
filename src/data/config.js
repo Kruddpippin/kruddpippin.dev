@@ -12,7 +12,7 @@ const CONFIG = {
   },
   process: [
     { day: "Day 0", t: "Brief", d: "You send your content, brand and one reference. The clock starts." },
-    { day: "Day 1–2", t: "Build", d: "I design and build your page, sending updates so you're never in the dark." },
+    { day: "Day 1–2", t: "Build", d: "We design and build your page, sending updates so you're never in the dark." },
     { day: "Day 2", t: "Polish", d: "Speed, responsiveness and copy tightened until it's genuinely fast." },
     { day: "Day 3", t: "Ship", d: "Deployed live under your account, code handed over. You're ready to sell." },
   ],
@@ -155,19 +155,19 @@ const CONFIG = {
   faqs: [
     {
       q: "Can you really deliver in 72 hours?",
-      a: "Yes, that's the whole point of the Express Page. Once I have your content and brand assets, the clock starts and your page is live in three days. If I'm ever late, you get your money back.",
+      a: "Yes, that's the whole point of the Express Page. Once we have your content and brand assets, the clock starts and your page is live in three days. If we're ever late, you get your money back.",
     },
     {
       q: "What do you need from me to start?",
-      a: "Your text (or rough notes I can polish), your logo and any brand colours, and one example of a site you like. That's enough to begin.",
+      a: "Your text (or rough notes we can polish), your logo and any brand colours, and one example of a site you like. That's enough to begin.",
     },
     {
       q: "Do I own the code?",
-      a: "Completely. I hand over the full project and deploy it under your account, so you're never locked in.",
+      a: "Completely. We hand over the full project and deploy it under your account, so you're never locked in.",
     },
     {
       q: "How do payments work?",
-      a: "50% to start, 50% on delivery. I accept Payoneer, bank transfer and USDT, so paying from anywhere is straightforward.",
+      a: "50% to start, 50% on delivery. We accept Payoneer, bank transfer and USDT, so paying from anywhere is straightforward.",
     },
   ],
 };
