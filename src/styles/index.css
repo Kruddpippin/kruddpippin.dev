@@ -10,7 +10,7 @@
   --shadow:rgba(0,0,0,.4);
 }
 .root[data-theme="light"]{
-  --bg:oklch(96.5% 0.02 18); --bg2:oklch(97.5% 0.015 18);
+  --bg:#f4f1ea; --bg2:oklch(97.5% 0.015 18);
   --surface:oklch(99% 0.008 18); --surface2:oklch(93.5% 0.025 18);
   --border:rgba(77,17,25,.13); --border2:rgba(77,17,25,.22);
   --text:oklch(20% 0.035 18); --muted:oklch(42% 0.04 18);
