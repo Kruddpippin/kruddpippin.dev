@@ -1,4 +1,4 @@
-import Reveal from "../components/Reveal.jsx";
+import Reveal, { staggerDelay } from "../components/Reveal.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 import CONFIG from "../data/config.js";
 
@@ -19,7 +19,7 @@ export default function Testimonials() {
           </div>
         </Reveal>
         {rest.map((t, i) => (
-          <Reveal key={t.name} delay={(i + 1) * 90} className="quote-card">
+          <Reveal key={t.name} delay={staggerDelay(i + 1)} className="quote-card">
             <p>"{t.quote}"</p>
             <div className="quote-by">
               <div className="avatar">{t.name.charAt(0)}</div>

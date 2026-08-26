@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Reveal from "../components/Reveal.jsx";
+import Reveal, { staggerDelay } from "../components/Reveal.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 import CONFIG from "../data/config.js";
 
@@ -12,7 +12,7 @@ export default function Faq() {
       <SectionHead title="Good to know" />
       <div className="faq">
         {CONFIG.faqs.map((f, i) => (
-          <Reveal key={f.q} delay={i * 60}>
+          <Reveal key={f.q} delay={staggerDelay(i)}>
             <button
               className={`faq-item ${openFaq === i ? "open" : ""}`}
               onClick={() => setOpenFaq(openFaq === i ? -1 : i)}

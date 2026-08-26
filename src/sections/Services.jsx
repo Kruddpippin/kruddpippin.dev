@@ -1,5 +1,5 @@
 import { Check, ArrowRight } from "lucide-react";
-import Reveal from "../components/Reveal.jsx";
+import Reveal, { staggerDelay } from "../components/Reveal.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 import CONFIG from "../data/config.js";
 
@@ -11,7 +11,7 @@ export default function Services({ go }) {
         {CONFIG.packages.map((pkg, i) => (
           <Reveal
             key={pkg.name}
-            delay={i * 90}
+            delay={staggerDelay(i)}
             className={`price-card ${pkg.featured ? "featured" : ""}`}
           >
             {pkg.tag && <span className="price-tag">{pkg.tag}</span>}

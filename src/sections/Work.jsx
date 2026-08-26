@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import Reveal from "../components/Reveal.jsx";
+import Reveal, { staggerDelay } from "../components/Reveal.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 import CONFIG from "../data/config.js";
 
@@ -9,7 +9,7 @@ export default function Work() {
       <SectionHead title="Pages that earn their keep" />
       <div className="work-grid">
         {CONFIG.projects.map((p, i) => (
-          <Reveal key={p.title} delay={i * 80} className="work-card">
+          <Reveal key={p.title} delay={staggerDelay(i)} className="work-card">
             <a
               href={p.live}
               target="_blank"

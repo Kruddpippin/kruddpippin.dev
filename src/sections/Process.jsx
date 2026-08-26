@@ -1,4 +1,4 @@
-import Reveal from "../components/Reveal.jsx";
+import Reveal, { staggerDelay } from "../components/Reveal.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 
 const steps = [
@@ -30,7 +30,7 @@ export default function Process() {
       <SectionHead title="From brief to live in three days" />
       <div className="process">
         {steps.map((step, i) => (
-          <Reveal key={step.t} delay={i * 100} className="step">
+          <Reveal key={step.t} delay={staggerDelay(i)} className="step">
             <span className="step-num">{i + 1}</span>
             <span className="step-day">{step.day}</span>
             <h4>{step.t}</h4>
