@@ -1,6 +1,6 @@
 const CONFIG = {
   brand: "SIGNAL LABS",
-  role: "We build landing pages that load fast and convert, shipped in 72 hours.",
+  role: "We build landing pages that load fast and win you customers, shipped in 72 hours.",
   location: "Abuja, Nigeria · Working with clients worldwide",
   heroImage: "/hero-showcase.webp",
   heroImageWidth: 1100,
@@ -32,9 +32,9 @@ const CONFIG = {
       price: "$180",
       tag: "Most popular",
       featured: true,
-      blurb: "One high-converting landing page, live in 72 hours.",
+      blurb: "One landing page built to bring in more customers, live in 72 hours.",
       features: [
-        "Single conversion-focused page",
+        "Single page, built to bring in customers",
         "Mobile-first, responsive build",
         "Copy polish + clear call-to-action",
         "Deployed live (you keep the code)",
@@ -102,7 +102,7 @@ const CONFIG = {
     {
       title: "Mayen's Touch",
       type: "Fashion House landing page",
-      stack: ["Landing", "Conversion"],
+      stack: ["Landing", "Bookings"],
       grad: "linear-gradient(135deg,#3a1d5e,#8b5cf6 60%,#ffb4a2)",
       screenshot: "/mayen-s-touch.webp",
       screenshotWidth: 900,

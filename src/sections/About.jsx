@@ -3,7 +3,7 @@ import Reveal from "../components/Reveal.jsx";
 import CONFIG from "../data/config.js";
 
 const skills = [
-  "React", "Vite", "Responsive design", "Performance", "Conversion copy", "Deployment",
+  "React", "Vite", "Responsive design", "Performance", "Persuasive copy", "Deployment",
 ];
 
 export default function About() {
