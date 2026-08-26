@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight } from "lucide-react";
+import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight, Zap, Clock } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
 import CONFIG from "../data/config.js";
 
@@ -72,6 +72,20 @@ export default function Contact() {
                 <path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-7-6.2 7H1.6l8.1-9.3L1 2h7.1l4.9 6.5L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z" />
               </svg>
             </a>
+          </div>
+          <div className="contact-trust">
+            <div className="statement-feature">
+              <Zap size={18} />
+              <div><strong>Fast by default</strong><span>Pages built to load in around a second.</span></div>
+            </div>
+            <div className="statement-feature">
+              <Clock size={18} />
+              <div><strong>On time, every time</strong><span>Late delivery means your money back.</span></div>
+            </div>
+            <div className="statement-feature">
+              <Check size={18} />
+              <div><strong>You own everything</strong><span>Full code handover, no lock-in.</span></div>
+            </div>
           </div>
         </Reveal>
 
@@ -147,6 +161,9 @@ export default function Contact() {
               {sending ? "Sending…" : <> Send message <ArrowUpRight size={16} /> </>}
             </button>
           )}
+          <p className="response-note">
+            We reply within one business day with a price and a start date.
+          </p>
         </Reveal>
       </div>
     </section>

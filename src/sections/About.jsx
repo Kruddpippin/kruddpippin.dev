@@ -1,4 +1,4 @@
-import { Zap, Clock, Check, Layers } from "lucide-react";
+import { Layers } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
 import CONFIG from "../data/config.js";
 
@@ -31,21 +31,6 @@ export default function About() {
           </div>
         </Reveal>
       </div>
-
-      <Reveal delay={120} className="statement-features">
-        <div className="statement-feature">
-          <Zap size={18} />
-          <div><strong>Fast by default</strong><span>Pages built to load in around a second.</span></div>
-        </div>
-        <div className="statement-feature">
-          <Clock size={18} />
-          <div><strong>On time, every time</strong><span>Late delivery means your money back.</span></div>
-        </div>
-        <div className="statement-feature">
-          <Check size={18} />
-          <div><strong>You own everything</strong><span>Full code handover, no lock-in.</span></div>
-        </div>
-      </Reveal>
     </section>
   );
 }
