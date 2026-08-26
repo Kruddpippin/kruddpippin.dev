@@ -51,7 +51,11 @@ export default function Nav({ theme, setTheme, menuOpen, setMenuOpen, active, go
         </div>
       </header>
 
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      <div
+        className={`mobile-menu ${menuOpen ? "open" : ""}`}
+        inert={!menuOpen}
+        aria-hidden={!menuOpen}
+      >
         {navLinks.map(([id, label]) => (
           <button key={id} onClick={() => go(id)}>{label}</button>
         ))}
