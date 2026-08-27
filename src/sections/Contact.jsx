@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Check, Copy, ArrowUpRight, ChevronDown, Zap, Clock } from "lucide-react";
+import { Mail, Github, Linkedin, Check, ArrowUpRight, ChevronDown, Zap, Clock } from "lucide-react";
 import Reveal from "../components/Reveal.jsx";
 import WhatsAppIcon from "../components/WhatsAppIcon.jsx";
 import CONFIG from "../data/config.js";
@@ -8,7 +8,6 @@ const PRICED_SERVICES = ["Express Page", "Full Site", "Mobile App", "Care Plan"]
 const OTHER_SERVICES = ["E-commerce Integration", "SEO & Performance Audit", "UI/UX Design", "Branding & Logo"];
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", services: [], message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -20,16 +19,6 @@ export default function Contact() {
       ? [...form.services, service]
       : form.services.filter((s) => s !== service);
     setForm({ ...form, services: updated });
-  };
-
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(CONFIG.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1800);
-    } catch {
-      /* clipboard blocked — ignore */
-    }
   };
 
   const sendMessage = async () => {
@@ -67,15 +56,15 @@ export default function Contact() {
             Tell us what you're working on. We'll reply within a day with a
             clear price and a start date.
           </p>
-          <button className="email-copy" onClick={copyEmail}>
+          <a
+            href={`mailto:${CONFIG.email}?subject=${encodeURIComponent("I'd like a page built")}`}
+            className="email-copy"
+          >
             <Mail size={16} /> {CONFIG.email}
             <span className="copy-state">
-              {copied
-                ? (<><Check size={14} /> Copied</>)
-                : (<><Copy size={14} /> Copy</>)
-              }
+              <ArrowUpRight size={14} /> Email
             </span>
-          </button>
+          </a>
           <a
             href={CONFIG.whatsapp}
             target="_blank"
