@@ -1,0 +1,62 @@
+filters:
+  and:
+    - 'file.inFolder("notes/Improvements")'
+
+formulas:
+  status_icon: 'if(status == "shipped", "✅", if(status == "in-progress", "🔧", if(status == "planned", "📌", if(status == "wontfix", "🚫", "💡"))))'
+  age_days: '(now() - file.ctime).days.round(0)'
+
+properties:
+  formula.status_icon:
+    displayName: ""
+  status:
+    displayName: Status
+  area:
+    displayName: Area
+  priority:
+    displayName: Priority
+  effort:
+    displayName: Effort
+  formula.age_days:
+    displayName: "Age (d)"
+
+views:
+  - type: table
+    name: "By status"
+    filters:
+      not:
+        - 'status == "shipped"'
+        - 'status == "wontfix"'
+    order:
+      - formula.status_icon
+      - file.name
+      - area
+      - priority
+      - effort
+      - formula.age_days
+    groupBy:
+      property: status
+      direction: ASC
+
+  - type: table
+    name: "By area"
+    order:
+      - formula.status_icon
+      - file.name
+      - status
+      - priority
+      - effort
+    groupBy:
+      property: area
+      direction: ASC
+
+  - type: table
+    name: "All"
+    order:
+      - formula.status_icon
+      - file.name
+      - area
+      - status
+      - priority
+      - effort
+      - formula.age_days
